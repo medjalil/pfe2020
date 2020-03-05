@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        <link href="{{ asset('css/blog.css') }}" rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    <header>
+
+
+    	<nav >
+        <label class="logo">LOgo</label>
+
+        <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+           
+
+    <ul >    
+              <li> 
+                <a class="navbar-brand" href="/">  accueil  </a>
+              </li>
+          <li>
+          <a class="nav-link" href="{{path('blog')}}"> Notre produits </a>
+          </li>
+          <li >
+             <a class="nav-link" href="blog/Historique"> historique</a>
+         </li>
+         <li >
+           <a class="nav-link" href="/contact">contact </a>
+        </li>
+        <li >
+             <a class="nav-link" href="{{path('blog_create')}}"> new article ! </a>
+       </li>
+    </ul>
+</nav>
+</header>
+
+
+<div class="container">
+        {% block body %}{% endblock %}
+  </div>
+        {% block javascripts %}{% endblock %}
+      
+    </body>
+</html>

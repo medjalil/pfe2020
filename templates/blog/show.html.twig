@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<produit>
+	<h2>{{produit.title}}</h2> 
+	<div class="metadata">Ecrit {{produit.createdAt | date ('d/m/y')}} a {{produit.createdAt |date ('H:i')}}dans la gategorie politique</div>
+	<div class="content">
+		<img src="{{produit.image}} " alt="">
+{{produit.content | raw}}
+=</div>
+</produit>
+{% endblock %}

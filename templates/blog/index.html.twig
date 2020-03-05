@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block body %}
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+	<link href="{{ asset('css/blog.css') }}" rel="stylesheet"/>
+</head>
+
+<section class="notreproduits">
+	{% for produit in produits %}
+	<produit >
+		<h2>{{produit.title}}</h2>
+	    <div class="metadata">ecrit le {{ produit.createdAt | date('d/m/y')}} a {{produit.createdAt | date('H:i')}} dans la gategorie politique</div>
+	    <div class="content">
+		<img src="{{ produit.image }}"  alt="">
+		{{produit.content |raw}}
+<a href="{{path('blog_show',{'id': produit.id})}}" class="btn btn-primary">lire la suite</a>
+</div>
+</produit>
+{% endfor %}
+
+</section>
+
+{% endblock %}
