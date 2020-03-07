@@ -1709,7 +1709,7 @@ body{
 .navigation{
   position: absolute;
   bottom: 15px;
-  left: 40%;
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
 }
