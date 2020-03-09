@@ -13,6 +13,9 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use App\Entity\Produits;
+use App\Entity\Contact;
+
+use App\Form\ContactType;
 use App\Repository\ArticleRepository;
 class BlogController extends AbstractController
 {
@@ -83,8 +86,24 @@ class BlogController extends AbstractController
       /**
     * @Route("/contact",name="contact")
     */
-    public function conatct(){
-        return $this->render('blog/contact.html.twig');
+    public function conatct(Request $request, EntityManagerInterface $manager){
+        $form = $this->createForm(ContactType::class);
+        $contact = new Contact;
+        $form->handleRequest($request);
+               
+        if($form->isSubmitted() && $form->isValid()){
+            $contact=$form->getData();
+            $manager->persist($contact);
+            $manager->flush();
+            $this->addFlash(
+                'notice',
+                'votre message etait envoyé!');
+          
+            return $this->redirectToRoute('blog');
+        }
+        
+        return $this->render('blog/contact.html.twig',[
+        'form'=>$form->createView()]);
         
     }
   
