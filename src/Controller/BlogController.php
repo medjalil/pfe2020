@@ -86,15 +86,28 @@ class BlogController extends AbstractController
       /**
     * @Route("/contact",name="contact")
     */
-    public function conatct(Request $request, EntityManagerInterface $manager){
+    public function conatct(Request $request, EntityManagerInterface $manager ,\Swift_Mailer $mailer){
         $form = $this->createForm(ContactType::class);
         $contact = new Contact;
         $form->handleRequest($request);
                
         if($form->isSubmitted() && $form->isValid()){
             $contact=$form->getData();
-            $manager->persist($contact);
-            $manager->flush();
+            $message =(new \Swift_Message ('Nouveau contact'))
+            // on attribue l'expediteur
+            ->setFrom('emailab@hotmail.fr')
+            //on aatribue le destinateur
+            ->setTo('votre@adress.fr')
+            // on cree le message avec le vue twig
+            ->setBody(
+                $this->renderView('Emails/email.html.twig',compact('contact'),
+                'text/html')
+            )
+            ;
+            // on envoi le message
+            $mailer->send($message);
+          $manager->persist($contact);
+           $manager->flush();
             $this->addFlash(
                 'notice',
                 'votre message etait envoyé!');
