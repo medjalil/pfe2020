@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+    {% block stylesheets %}
         <title>{% block title %}Welcome!{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
-        <link href="{{ asset('css/blog.css') }}" rel="stylesheet"/>
+        <link href="{{ asset('css/base.css') }}" rel="stylesheet"/> 
+        <link href="{{ asset('css/at.css') }}" rel="stylesheet"/> 
 
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        {% block stylesheets %}{% endblock %}
+
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+{% endblock %}
     </head>
     <body>
         <header>
@@ -36,15 +37,12 @@
             <nav >
                 <label class="logo">logo</label>
 
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <i class="fas fa-bars"></i>
-                </label>
+               
 
 
                 <ul >
                     <li>
-                        <a class="navbar-brand" href="/">  accueil  </a>
+                        <a class="navbar-brand" href="/"> home  </a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{path('blog')}}"> Notre produits </a>
@@ -60,8 +58,10 @@
                     </li>
                 </ul>
             </nav>
-        </header>
         
+        
+        <!-- Header End -->
+    </header>
  
         <div class="container">
             {% block body %}{% endblock %}

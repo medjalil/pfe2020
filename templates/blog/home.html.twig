@@ -11,149 +11,392 @@
 
 {% block body %}
 <head>
-  <title>{% block title %}Welcome!{% endblock %}</title>
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
-  <link href="{{ asset('css/blog.css') }}" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Industery HTML-5 Template </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-  <div class="slidershow middle">
+		<!-- CSS here -->
+    <link href="{{ asset('css/at.css') }}" rel="stylesheet"/> 
+    
 
-    <div class="slides">
-      <input type="radio" name="r" id="r1" checked>
-      <input type="radio" name="r" id="r2">
-      <input type="radio" name="r" id="r3">
-      <input type="radio" name="r" id="r4">
-      <input type="radio" name="r" id="r5">
-      <div class="slide s1">
-        <img src="{{ asset('images/1.jpg') }}"alt="">
-      </div>
-      <div class="slide">
-        <img src="{{ asset('images/2.jpg') }}"alt="">
-      </div>
-      <div class="slide">
-        <img src="{{ asset('images/3.jpg') }}"alt="">
-      </div>
-      <div class="slide">
-        <img src="{{ asset('images/4.jpg') }}"alt="">
-      </div>
-      <div class="slide">
-        <img src="{{ asset('images/5.jpg') }}"alt="">
-      </div>
-    </div>
+   </head>
 
-    <div class="navigation">
-      <label for="r1" class="bar"></label>
-      <label for="r2" class="bar"></label>
-      <label for="r3" class="bar"></label>
-      <label for="r4" class="bar"></label>
-      <label for="r5" class="bar"></label>
-    </div>
-  </div>
-  <br><br><br><br><br><br>
+   <body>
+       
+   
+    <main>
 
-<div class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <h3 class="scissors text-center">Notre services </h3>
-            <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt nemo vel earum maxime neque!</p>
-          </div>
-        </div>
-        <div class="row hair-style">
-          <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="{{ asset('images/un.png') }}" alt="Symfony!"/>
-              <h2>Beard Shaving</h2>
-              <span>$50.00 only</span>
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="{{ asset('images/2.jpg') }}" alt="Symfony!"/>
-
-              <h2>Crew Cut</h2>
-              <span>$50.00 only</span>
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="{{ asset('images/1.jpg') }}" alt="Symfony!"/>
-
-              <h2>Beard Trim</h2>
-              <span>$50.00 only</span>
-            </a>
-
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="{{ asset('images/un.png') }}" alt="Symfony!"/>
-              <h2>Beard Shaving</h2>
-              <span>$50.00 only</span>
-            </a>
-          </div>
-
-          
-        </div>
-      </div>
-      <p><a href="#" class="btn btn-primary">Learn More</a></p>
-
-    </div> -->
-    <!--   contact --> 
-
-    <div class="site-section bg-light" id="contact-section">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-        <div class="col-7 text-center mb-5">
-          <h2>Contact Us Or Use This Form To Rent A Car</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda, dolorum necessitatibus eius earum voluptates sed!</p>
-        </div>
-      </div>
-        <div class="row">
-          <div class="col-lg-8 mb-5" >
-            <form action="#" method="post">
-              <div class="form-group row">
-                <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" placeholder="First name">
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            
+                <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="imgages/1.jpg">
+">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-8 col-md-8">
+                                <div class="hero__caption" data-background=src"imgages/color_bg.png">
+                                    <h1 data-animation="fadeInUp" data-delay=".4s" >Industery Solutions!</h1>
+                                    <p data-animation="fadeInUp" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.</p>
+                                    <!-- Hero-btn -->
+                                    <div class="hero__btn" data-animation="fadeInUp" data-delay=".7s">
+                                        <a href="industries.html" class="btn hero-btn">Our Services</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="First name">
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Email address">
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30" rows="10"></textarea>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-lg-4 ml-auto">
-            <div class="bg-white p-3 p-md-5">
-              <h3 class="text-black mb-4">Contact Info</h3>
-              <ul class="list-unstyled footer-link">
-                <li class="d-block mb-3">
-                  <span class="d-block text-black">Address:</span>
-                  <span>34 Street Name, City Name Here, United States</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Phone:</span><span>+1 242 4942 290</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>info@yourdomain.com</span></li>
-              </ul>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
+        <!-- slider Area End-->
 
+        <!-- Services Area Start -->
+        <div class="services-area d-flex justify-content-lg-between">
+            <div class="single-services s-bg mb-30">
+                <div class="services-icon">
+                    <img src="{{ asset('images/icon1.png') }}" alt="">
+                </div>
+                <div class="services-caption">
+                    <h4>Automotive Manufacturing</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+                <div class="services-btn">
+                    <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt="Symfony!"/>
+</a>
+                </div>
+            </div>
+            <div class="single-services mb-30">
+                <div class="services-icon">
+                <img src="{{ asset('images/icon2.png') }}" alt="Symfony!"/>
+                </div>
+                <div class="services-caption">
+                    <h4>Heavy industry market</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+                <div class="services-btn">
+                    <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt="sy"></a>
+                </div>
+            </div>
+            <div class="single-services s-bg mb-30">
+                <div class="services-icon">
+                    <img src="{{ asset('images/icon2.png') }}" alt="">
+                </div>
+                <div class="services-caption">
+                    <h4>Industry analysis</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+                <div class="services-btn">
+                    <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- Services Area End -->
+
+        <!-- Safe Industery Start -->
+        <div class="safe-industery-area section-padd-top30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md pr-0">
+                        <div class="safe-caption pt-10 mb-40">
+                            <h2>Safe IndusterySolutions That Saves our Valuable Time and mony!</h2>
+                            <p class="safe-pera-one">Logisti Group is a representative logistics operator providing full range of service in the sphere of customs clearance and transportation worldwide for any type of cargo.</p>
+                            <p  class="safe-pera-two">Lorem ipsum dolor sit amet, consectetur ipis adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna oris aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                            <p  class="safe-pera-three"> exercitation ullamco laboris nisi ut aliquip ex ea commodo nsequat. Duis aute irure dolor in repr.</p>
+                            <!-- btn -->
+                            <a href="industries.html" class="btn">Our Services</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 offset-xl-1 col-lg-6 pl-0">
+                        <div class="safe-caption-right">
+                            <div class="safe-img">
+                                <img src="{{ asset('images/team/h1__team.png') }}" alt="">
+                            </div>
+                            <!-- img TOP caption -->
+                            <div class="safe-alert-box">
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 d-none d-sm-block">
+                                        
+                                        <div class="safe-alert" data-background="{{ asset('images/color_bg.png') }}">
+                                            <img src="{{ asset('images/icon/aleart_icon.png') }}" alt="">
+                                            <h4>Our Mission</h4>
+                                            <p>Quis ipsum suspendisse ultrices gravidae Risus commodo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Safe Industery End -->
+
+        <!-- Gallery Start-->
+        <div class="gallery-area">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img">
+                                    <img src="{{ asset('images/2.jpg') }}" alt="">
+                                </div>
+                                <div class="g-caption1">
+                                    <span>01.</span>
+                                    <h4>Floride Chemicals Factory</h4>
+                                </div>
+                                <div class="g-caption2">
+                                    <span>01.</span>
+                                    <h4>Floride Chemicals Factory</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
+                                    <a href="work.html" class="read-btn">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img">
+                                    <img src="{{ asset('images/nn.jpg') }}" alt="">
+                                </div>
+                                <div class="g-caption1">
+                                    <span>02.</span>
+                                    <h4>Floride Chemicals Factory</h4>
+                                </div>
+                                <div class="g-caption2">
+                                    <span>02.</span>
+                                    <h4>Floride Chemicals Factory</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
+                                    <a href="work.html" class="read-btn">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img">
+                                    <img src="{{ asset('images/nn.jpg') }}" alt="">
+                                </div>
+                                <div class="g-caption1">
+                                    <span>03.</span>
+                                    <h4>Floride Chemicals Factory</h4>
+                                </div>
+                                <div class="g-caption2">
+                                    <span>03.</span>
+                                    <h4>Floride Chemicals Factory</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
+                                    <a href="work.html" class="read-btn">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img">
+                                    <img src="{{ asset('images/2.jpg') }}" alt="">
+                                </div>
+                                <div class="g-caption1">
+                                    <span>04.</span>
+                                    <h4>Floride Chemicals Factory</h4>
+                                </div>
+                                <div class="g-caption2">
+                                    <span>04.</span>
+                                    <h4>Floride Chemicals Factory</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
+                                    <a href="work.html" class="read-btn">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery End-->
+
+        <!-- Team Start -->
+        <div class="team-area section2-padding30">
+            <div class="container">
+                <div class="row">
+                    <!-- Team Info -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="team-info mb-30 pt-45">
+                          <h2>Our Team Best Mambers</h2>  
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ua. Ut enim ad minim veni.</p>
+
+                          <a href='contact' class="btn">Contact Us</a>
+                        </div>
+                    </div>
+                    <!-- single Tem -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                                <img src="{{ asset('images/team/h1__team.png') }}" alt="">
+                            </div>
+                            <div class="team-caption">
+                                <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                                <img src="{{ asset('images/team/h2__team.png') }}" alt="">
+                            </div>
+                            <div class="team-caption">
+                                 <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                                <img src="{{ asset('images/team/h3__team.png') }}" alt="">
+                            </div>
+                            <div class="team-caption">
+                                 <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                                <img src="{{ asset('images/team/h4__team.png') }}" alt="">
+                            </div>
+                            <div class="team-caption">
+                                 <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                            <img src="{{ asset('images/team/h5__team.png') }}" alt="">
+
+                            </div>
+                            <div class="team-caption">
+                                 <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        
+        <!-- Testimonial Start -->
+        <div class="testimonial-area t-bg testimonial-padding">
+            <div class="container ">
+               <div class="row d-flex justify-content-center">
+                    <div class="col-xl-11 col-lg-11 col-md-9">
+                        <div class="h1-testimonial-active">
+                            <!-- Single Testimonial -->
+                            <div class="single-testimonial text-center">
+                                 <!-- Testimonial Content -->
+                                <div class="testimonial-caption ">
+                                    <div class="testimonial-top-cap">
+                                        <img src="{{ asset('images/icon/test.png')}}" alt="">
+                                        <p>Logisti Group is a representative logistics operator providing full range of ser
+                                            of customs clearance and transportation worl.</p>
+                                    </div>
+                                    <!-- founder -->
+                                    <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                        <div class="founder-img">
+                                            <img src="assets/img/testmonial/Homepage_testi.png" alt="">
+                                        </div>
+                                       <div class="founder-text">
+                                            <span>Jessya Inn</span>
+                                            <p>Co Founder</p>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+        <!-- David Droga start -->
+        <div class="david-droga-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <!-- single-david -->
+                        <div class="single-david mb-30">
+                            <div class="david-img">
+                                <img src="{{ asset('images/team/h1__team.png')}}" alt="">
+                            </div>
+                            <div class="david-captoin">
+                                <ul class="david-info">
+                                    <li>November 24, 2020 </li>
+                                    <li> Manufacturing</li>
+                                </ul>
+                                <h2><a href="single-blog.html">David Droga Still Has Faith Advertising Dorga</a></h2>
+                                <a href="single-blog.html" class="d-btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <!-- single-david -->
+                        <div class="single-david mb-30">
+                            <div class="david-img">
+                                <img src="{{ asset('images/team/h2__team.png')}}"alt="">
+                            </div>
+                            <div class="david-captoin">
+                                <ul class="david-info">
+                                    <li>November 24, 2020 </li>
+                                    <li> Manufacturing</li>
+                                </ul>
+                                <h2><a href="single-blog.html">David Droga Still Has Faith Advertising Dorga</a></h2>
+                                <a href="single-blog.html" class="d-btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <!-- David Droga End -->
+
+        <!-- Want To Work Start -->
+        <div class="wantToWork-area w-padding">
+            <div class="container">
+                <div class="row d-flex align-items-end">
+                    <div class="col-xl-6 col-lg-8 col-md-8">
+                        <div class="wantToWork-caption">
+                            <h2>Want To Work<br> With Us? Hit The Button.</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-4 col-md-4">
+                       <div class="wantToWork-btn f-right">
+                            <a href="#" class="white-btn">Let’s Work Toghter</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Want To Work End -->
+
+    </main>
+  
+  
+        
+    </body>
+</html>
 
 
 
