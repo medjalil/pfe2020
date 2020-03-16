@@ -3,39 +3,63 @@
 {% block title %}Product index{% endblock %}
 
 {% block body %}
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Industery HTML-5 Template </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+		<!-- CSS here -->
+    <link href="{{ asset('css/at.css') }}" rel="stylesheet"/> 
+    
+
+   </head>
+   <body>
+
+       
+   
+
+
     <h1>Product index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Created_at</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
             {% for product in products %}
-                <tr>
-                    <td>{{ product.id }}</td>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.description }}</td>
-                    <td><img src="{{ product.image }}" width="100px"></td>
-                    <td>{{ product.createdAt ? product.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                    <td>
-                        <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
-                        <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
-                    </td>
-                </tr>
+            <div class="gallery-area section-padding2">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img">
+                                    <img src="{{product.image }}width:100%" alt="">
+                                </div>
+                                <div class="g-caption1">
+                                    <h4>{{product.name}}</h4>
+                                </div>
+                                <div class="g-caption2">
+                                    <h4>{{product.name}}</h4>
+                                    <p>{{product.description}}</p>
+                                    <a href="{{path('product_show',{'id': product.id})}}" class="btn">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+</div>
+</div>
+</div>
+         
             {% else %}
-                <tr>
-                    <td colspan="6">no records found</td>
-                </tr>
+                
+                    <p>no records found</p>
+            
             {% endfor %}
-        </tbody>
-    </table>
+            </main>
+  
+  
+        
+  </body>
+      
 
-    <a href="{{ path('product_new') }}">Create new</a>
 {% endblock %}

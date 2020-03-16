@@ -211,7 +211,7 @@ a:focus,
 a:focus,
 a:hover,
 .portfolio-cat a:hover,
-.footer -menu li a:hover {
+.footer-menu li a:hover {
   text-decoration: none; }
 
 a,
@@ -1994,7 +1994,7 @@ hr {
     .slider-area .hero__caption::after {
       position: absolute;
       content: "";
-      background-image: url(images/2.jpg);
+      background-image: url(../img/hero/hero_arrow.png);
       left: 0;
       right: 0;
       bottom: -26px;
@@ -2202,7 +2202,7 @@ hr {
       .safe-industery-area .safe-caption-right .safe-alert-box .safe-alert::after {
         position: absolute;
         content: "";
-        background-image: url(images/arrow_bottom.png);
+        background-image: url(../img/safe_industery/arrow_bottom.png);
         left: 0;
         right: 0;
         bottom: 0;
@@ -2493,7 +2493,7 @@ z-index: 0;}
   .wantToWork-area::after {
     position: absolute;
     content: "";
-    background-image: url(images/icon/footer_arrow.png);
+    background-image: url(../img/icon/footer_arrow.png);
     left: 0;
     right: 0;
     bottom: 0;
@@ -4809,15 +4809,5 @@ del {
   margin-bottom: 10px; }
 
   
-  /* .Rectangle_9 {
-    background-image: -moz-linear-gradient( 90deg, #00163ee6 0%, #00163e00 62%, #00163e 62%);
-    background-image: -webkit-linear-gradient( 90deg, rgba(0,22,62,0.90196) 0%, rgba(0,22,62,0) 62%, rgb(0,22,62) 62%);
-    background-image: -ms-linear-gradient( 90deg, rgba(0,22,62,0.90196) 0%, rgba(0,22,62,0) 62%, rgb(0,22,62) 62%);
-    position: absolute;
-    left: 1170px;
-    top: 3586px;
-    width: 360px;
-    height: 222px;
-    z-index: 162;
-  } */
+  
   

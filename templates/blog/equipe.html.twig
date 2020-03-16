@@ -1,0 +1,98 @@
+{% extends 'base.html.twig'%}
+{% block body %}
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Industery HTML-5 Template </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+		<!-- CSS here -->
+    <link href="{{ asset('css/at.css') }}" rel="stylesheet"/> 
+    
+
+   </head>
+
+   <body>
+       
+   
+    <main>
+    <div class="team-area section2-padding30">
+            <div class="container">
+                <div class="row">
+                    <!-- Team Info -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="team-info mb-30 pt-45">
+                          <h2>Our Team Best Mambers</h2>  
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ua. Ut enim ad minim veni.</p>
+
+                          <a href='contact' class="btn">Contact Us</a>
+                        </div>
+                    </div>
+                    <!-- single Tem -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                                <img src="{{ asset('images/team/h1__team.png') }}" alt="">
+                            </div>
+                            <div class="team-caption">
+                                <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                                <img src="{{ asset('images/team/h2__team.png') }}" alt="">
+                            </div>
+                            <div class="team-caption">
+                                 <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                                <img src="{{ asset('images/team/h3__team.png') }}" alt="">
+                            </div>
+                            <div class="team-caption">
+                                 <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                                <img src="{{ asset('images/team/h4__team.png') }}" alt="">
+                            </div>
+                            <div class="team-caption">
+                                 <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                            <img src="{{ asset('images/team/h5__team.png') }}" alt="">
+
+                            </div>
+                            <div class="team-caption">
+                                 <span><a href="#">Bruce Roberts</a></span>
+                                <p>Team Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+</main>
+</body>
+{% endblock %}

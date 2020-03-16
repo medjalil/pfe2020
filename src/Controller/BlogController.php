@@ -119,5 +119,11 @@ class BlogController extends AbstractController
         'form'=>$form->createView()]);
         
     }
+    /**
+     * @Route("/equipe",name="equipe")
+     */
+    public function equipe(){
+        return $this->render('blog/equipe.html.twig');
+    }
   
   }
