@@ -14,14 +14,17 @@
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
 		<!-- CSS here -->
-    <link href="{{ asset('css/at.css') }}" rel="stylesheet"/> 
+    <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
     
 
    </head>
    <body>
+      
+                    
 
        
-   
+   <main>
+       
 
 
     <h1>Product index</h1>
@@ -33,15 +36,18 @@
                         <div class="gallery-box">
                             <div class="single-gallery">
                                 <div class="gallery-img">
-                                    <img src="{{product.image }}width:100%" alt="">
+                                    <img src="{{product.image }}" alt="" >
                                 </div>
                                 <div class="g-caption1">
+                                    <span> {{product.id}}</span>
                                     <h4>{{product.name}}</h4>
                                 </div>
                                 <div class="g-caption2">
+                                <span> {{product.id}}</span>
+
                                     <h4>{{product.name}}</h4>
                                     <p>{{product.description}}</p>
-                                    <a href="{{path('product_show',{'id': product.id})}}" class="btn">Read more</a>
+                                    <a href="{{path('product_show',{'id': product.id})}}" class="read_btn">Read more</a>
                                 </div>
                             </div>
                         </div>
@@ -49,13 +55,13 @@
 </div>
 </div>
 </div>
+
          
-            {% else %}
-                
-                    <p>no records found</p>
+
             
             {% endfor %}
-            </main>
+
+</main>
   
   
         

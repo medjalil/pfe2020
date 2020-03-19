@@ -11,7 +11,7 @@ class ProductFixtures extends Fixture {
 
     public function load(ObjectManager $manager) {
         $faker = Factory::create('fr_FR');
-        for ($i = 0; $i < 30; $i++) {
+        for ($i = 0; $i < 8; $i++) {
             $product = new Product();
             $product->setName($faker->text($maxNbChars = 100));
             $product->setDescription($faker->realText($maxNbChars = 200, $indexSize = 2));

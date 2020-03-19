@@ -19,3 +19,6 @@
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 /nbproject/private/
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###

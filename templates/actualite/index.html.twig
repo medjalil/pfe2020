@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}actualiteindex{% endblock %}
+
+{% block body %}
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Industery HTML-5 Template </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+		<!-- CSS here -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet"/> 
+    
+
+   </head>
+   <body>
+      
+                    
+
+       
+   <main>
+       
+
+
+    <h1>actualite index</h1>
+            {% for actualite in actualites%}
+            <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="{{actualite.image}}" alt="Image"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">{{actualite.titre}}</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="contact">Admin</a></span>
+                <p>{{actualite.titre}}</p>
+              </div>
+            </div>
+          </div>
+            {% endfor %}
+
+</main>
+  
+  
+        
+  </body>
+      
+
+{% endblock %}

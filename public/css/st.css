@@ -211,7 +211,7 @@ a:focus,
 a:focus,
 a:hover,
 .portfolio-cat a:hover,
-.footer-menu li a:hover {
+.footer -menu li a:hover {
   text-decoration: none; }
 
 a,
@@ -1994,7 +1994,7 @@ hr {
     .slider-area .hero__caption::after {
       position: absolute;
       content: "";
-      background-image: url(../img/hero/hero_arrow.png);
+      background-image: url(../imgages/hasw.jpg);
       left: 0;
       right: 0;
       bottom: -26px;
@@ -2233,17 +2233,22 @@ hr {
 
 .gallery-area .gallery-box .single-gallery {
   z-index: 0;
-  position: relative; }
+  position: relative;
+  
+  
+  }
   .gallery-area .gallery-box .single-gallery::before {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 480px;
+    height: 750px;
     bottom: 0;
     content: ""; }
   .gallery-area .gallery-box .single-gallery::after {
     content: "";
     background: #f27420;
     position: absolute;
+    width: 480px;
+    height: 750px;
     top: 0;
     left: 0;
     bottom: 0;
@@ -2256,8 +2261,14 @@ hr {
     -moz-transition: .4s;
     -ms-transition: .4s;
     -o-transition: .4s; }
+    
+
+
+   
   .gallery-area .gallery-box .single-gallery .gallery-img img {
-    width: 100%; }
+    width: 480px; 
+height: 750px;
+}
   .gallery-area .gallery-box .single-gallery .g-caption1 {
     position: absolute;
     bottom: 15px;
@@ -4809,5 +4820,5 @@ del {
   margin-bottom: 10px; }
 
   
-  
+
   
