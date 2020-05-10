@@ -14,7 +14,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
 		<!-- CSS here -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet"/> 
+    <link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/> 
     
 
    </head>
@@ -29,24 +29,31 @@
 
     <h1>actualite index</h1>
             {% for actualite in actualites%}
-            <div class="site-section bg-light">
-      <div class="container">
-        <div class="row">
-          
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="post-entry-1 h-100">
-              <a href="single.html">
-                <img src="{{actualite.image}}" alt="Image"
-                 class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                
-                <h2><a href="single.html">{{actualite.titre}}</a></h2>
-                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="contact">Admin</a></span>
-                <p>{{actualite.titre}}</p>
-              </div>
+            <div class="about">
+    <div class="row">
+		<div class="col-md-6">
+			<div class="about-info">
+				<h3>welcome <span>carlos site</span>{{actualite.titre}}</h3>
+				<p class="about-info-desc">
+			{{actualite.contenu}}
+        </p>
+        <br>
+        <a href="{{path('actualite_show',{'id': actualite.id})}}" class="read_btn">Read more</a>
+
+ 
+			</div>
+			
+		</div>
+				<div class="col-md-6">
+					<div class="about-img">
+						<img src="{{actualite.image}}">
             </div>
-          </div>
+
+            </div>
+
+
+</div>
+<br>
             {% endfor %}
 
 </main>

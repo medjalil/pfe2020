@@ -1,0 +1,26 @@
+.about .about-info h3{
+	font-size: 25px;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+.about .about-info h3 span{
+	color: #7cb62f;
+}
+.about .about-info .about-info-desc{
+	line-height: 1.8;
+	color: #888;
+	margin-bottom: 20px;
+
+}
+.about .about-info .about-info-btn{
+	background-color: #7cb62f;
+	padding: 10px 20px;
+	border:0;
+	color:#fff;
+	font-weight: bold;
+}
+.about .about-img img{
+	width: 50%;
+	height: 10%;
+	
+}

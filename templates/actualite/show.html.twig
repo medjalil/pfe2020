@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Product{% endblock %}
+{% block title %}Actualite{% endblock %}
 
 {% block body %}
 <head>
@@ -18,26 +18,26 @@
     
 
    </head>
-    <h1>Product</h1>
+    <h1>Actaulité</h1>
 
     <div class="g-caption1">
-                                    <h4>{{product.name}}</h4>
+                                    <h4>{{actualite.titre}}</h4>
                                 </div>
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="gallery-box">
                             <div class="single-gallery">
                                 <div class="gallery-img">
-                                    <img src="{{ product.image }}"alt="">
+                                    <img src="{{ actualite.image }}"alt="">
                                 </div>
                               
                                 <div class="g-caption2">                
-                                    <p>{{ product.description }}</p>
+                                    <p>{{ actualite.contenu}}</p>
                                     </div>
                             </div>
                         </div>
                     </div>
 
-    <a href="{{ path('product_index') }}" class="btn">back to list</a>
+    <a href="{{ path('actualite_index') }}" class="btn">back to list</a>
 
 
 {% endblock %}
