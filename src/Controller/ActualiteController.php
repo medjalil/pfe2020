@@ -77,7 +77,7 @@ class ActualiteController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('actualitet_index');
+            return $this->redirectToRoute('actualite_index');
         }
 
         return $this->render('actualite/edit.html.twig', [

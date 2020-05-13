@@ -14,30 +14,44 @@
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
 		<!-- CSS here -->
-    <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
+     <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
+
+    <link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/> 
+
     
 
    </head>
-    <h1>Actaulité</h1>
+    <div class="about">
+    <div class="row">
+		<div class="col-md-6">
+			<div class="about-info">
+				<h3>welcome <span>carlos site</span>{{actualite.titre}}</h3>
+				<p class="about-info-desc">
+			{{actualite.contenu}}
+        </p>
+        <br>
 
-    <div class="g-caption1">
-                                    <h4>{{actualite.titre}}</h4>
-                                </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="gallery-box">
-                            <div class="single-gallery">
-                                <div class="gallery-img">
-                                    <img src="{{ actualite.image }}"alt="">
-                                </div>
-                              
-                                <div class="g-caption2">                
-                                    <p>{{ actualite.contenu}}</p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
+ 
+			</div>
+           
+			
+		</div>
+				<div class="col-md-6">
+					<div class="about-img">
+						<img src="{{actualite.image}}">
+            <br>
+            <br>
+            </div>
+</div>
+
+            </div>
+
+
+</div>
 
     <a href="{{ path('actualite_index') }}" class="btn">back to list</a>
+    <br>
+    <br>
 
 
 {% endblock %}
