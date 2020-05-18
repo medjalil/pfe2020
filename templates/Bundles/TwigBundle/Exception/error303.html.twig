@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vous n'avez pas le droit d'accéder à cette ressource{% endblock %}
+
+{% block body %}
+<head>
+<link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
+</head>
+
+    <div class="container">
+        <h1>Alors ? Vous essayez de bousiller le site ?!</h1>
+        <div class="alert alert-danger">
+            <p>Vous n'avez pas le droit d'accéder à cette ressource !</p>
+        </div>
+
+     
+
+{% endblock %}

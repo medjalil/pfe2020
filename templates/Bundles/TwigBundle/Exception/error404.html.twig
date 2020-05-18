@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Page non trouvée{% endblock %}
+
+
+
+{% block body %}
+<head>
+<link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
+
+
+</head>
+
+
+    <div class="container">
+        <h1>Oups ! La page que vous recherchez n'existe pas !</h1>
+        <p>On a surement du mal vous renseigner ! Aucun soucis, vous pouvez retourner à l'accueil ou voir nos dernières services  !</p>
+        <p> code de l'erreur :{{ status_code }}</p>
+        <p>message de l'erreur :{{status_text }}</p>
+
+    </div>
+
+{% endblock %}
