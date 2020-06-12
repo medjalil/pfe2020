@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"/> 
+        <link href="{{ asset('css/slicknav.css') }}" rel="stylesheet"/> 
+        <link href="{{ asset('css/slick.css') }}" rel="stylesheet"/> 
 
 
 
@@ -85,7 +88,7 @@
         <div class="container">
             {% block body %}{% endblock %}
         </div>
-        {% block javascripts %}{% endblock %}
+       
          <!-- Want To Work Start -->
          <div class="wantToWork-area w-padding">
             <div class="container">
@@ -214,6 +217,41 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                            
        <!-- Footer End-->
    </footer>
+   {% block javascripts %}
+        
+        <script src="{{ asset('js/jquery.slicknav.min.js') }}"></script>
+        <script src="{{ asset('js/animated.headline.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/gijgo.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.form.js') }}"></script>
+        <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
+        <script src="{{ asset('js/jquery.nice-select.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.paroller.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.sticky.js') }}"></script>
+        <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
+        <script src="{{ asset('js/mail-script.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
+        <script src="{{ asset('js/one-page-nav-min.js') }}"></script>
+        <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('js/plugins.js') }}"></script>
+        <script src="{{ asset('js/popper.min.js') }}"></script>
+        <script src="{{ asset('js/slick.min.js') }}"></script>
+        <script src="{{ asset('js/wow.min.js') }}"></script>
+        <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
+        <script src="{{ asset('js/modernizr-3.5.0.min.js') }}"></script>
+
+
+
+
+
+
+        
+        
+        
+        
+        {% endblock %}
 
     </body>
 </html>
