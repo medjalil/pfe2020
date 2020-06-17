@@ -97,7 +97,7 @@ class BlogController extends AbstractController
             // on attribue l'expediteur
             ->setFrom('emailab@hotmail.fr')
             //on aatribue le destinateur
-            ->setTo('votre@adress.fr')
+            ->setTo('facturation.abdeljalil@gmail.com')
             // on cree le message avec le vue twig
             ->setBody(
                 $this->renderView('Emails/email.html.twig',compact('contact'),
@@ -112,7 +112,7 @@ class BlogController extends AbstractController
                 'notice',
                 'votre message etait envoyé!');
           
-            return $this->redirectToRoute('blog');
+            return $this->redirectToRoute('home');
         }
         
         return $this->render('blog/contact.html.twig',[
