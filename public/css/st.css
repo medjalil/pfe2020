@@ -1994,7 +1994,7 @@ hr {
     .slider-area .hero__caption::after {
       position: absolute;
       content: "";
-      background-image: url(../imgages/hasw.jpg);
+      background-image:url(../images/hero_arrow.png);
       left: 0;
       right: 0;
       bottom: -26px;
@@ -2202,7 +2202,7 @@ hr {
       .safe-industery-area .safe-caption-right .safe-alert-box .safe-alert::after {
         position: absolute;
         content: "";
-        background-image: url(../img/safe_industery/arrow_bottom.png);
+        background-image: url(../images/arrow_bottom.png);
         left: 0;
         right: 0;
         bottom: 0;
@@ -2504,7 +2504,7 @@ z-index: 0;}
   .wantToWork-area::after {
     position: absolute;
     content: "";
-    background-image: url(../img/icon/footer_arrow.png);
+    background-image: url(../images/footer_arrow.png);
     left: 0;
     right: 0;
     bottom: 0;

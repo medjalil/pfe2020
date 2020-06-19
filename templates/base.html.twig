@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+
     {% block stylesheets %}
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"/> 
         <link href="{{ asset('css/slicknav.css') }}" rel="stylesheet"/> 
         <link href="{{ asset('css/slick.css') }}" rel="stylesheet"/> 
-
-
-
-        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
-{% endblock %}
+        <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet"/> 
     </head>
     <body>
     
