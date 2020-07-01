@@ -473,7 +473,10 @@ hr {
   text-align: center;
   border-radius: 50%;
   line-height: 48px;
-  border: 2px solid transparent; }
+  border: 2px solid transparent;
+  background-image: url(../images/icon/flesh.png);
+background-repeat: no-repeat;
+background-position: center;  }
   @media (max-width: 767px) {
     #scrollUp {
       right: 16px; } }

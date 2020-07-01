@@ -88,4 +88,5 @@ class Actualite
 
         return $this;
     }
+    
 }
