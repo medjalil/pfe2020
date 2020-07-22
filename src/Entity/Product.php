@@ -2,10 +2,14 @@
 
 namespace App\Entity;
 
+use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
+ * @Vich\Uploadable
  */
 class Product {
 
@@ -24,12 +28,25 @@ class Product {
     /**
      * @ORM\Column(type="text")
      */
+    
     private $description;
+
+      /**
+     * @Vich\UploadableField(mapping="products", fileNameProperty="image")
+     *
+     * @var File
+     */
+    private $imageFile;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $image;
+     
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updatedAt;
 
     /**
      * @ORM\Column(type="datetime")
@@ -53,6 +70,8 @@ class Product {
 
         return $this;
     }
+   
+    
 
     public function getDescription(): ?string {
         return $this->description;
@@ -63,6 +82,23 @@ class Product {
 
         return $this;
     }
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+  
+    public function setImageFile(?File $imageFile = null)
+    {
+        $this->imageFile = $imageFile;
+
+        if (null !== $imageFile) {
+           
+            $this->updatedAt = new DateTimeImmutable();
+        }
+    }
+
+  
 
     public function getImage(): ?string {
         return $this->image;
@@ -81,6 +117,23 @@ class Product {
     public function setCreatedAt(\DateTimeInterface $created_at): self {
         $this->created_at = $created_at;
 
+        return $this;
+    }
+     /**
+     * @return \DateTimeInterface|null
+     */
+    public function getUpdated(): ?\DateTimeInterface
+    {
+        return $this->updated;
+    }
+
+    /**
+     * @param \DateTimeInterface|null $updated
+     * @return $this
+     */
+    public function setUpdated(?\DateTimeInterface $updated): self
+    {
+        $this->updated = $updated;
         return $this;
     }
 

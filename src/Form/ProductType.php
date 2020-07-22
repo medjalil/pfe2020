@@ -16,7 +16,14 @@ class ProductType extends AbstractType
             ->add('description')
             ->add('image')
             ->add('created_at')
-        ;
+            ->add('imageFile',VichImageType::class, [
+                'required' => false,
+                'download_uri' => true,
+                'image_uri' => true
+            ]);
+        
+    
+        
     }
 
     public function configureOptions(OptionsResolver $resolver)

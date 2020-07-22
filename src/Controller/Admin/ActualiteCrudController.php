@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Actualite;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -25,7 +26,10 @@ class ActualiteCrudController extends AbstractCrudController
             TextField::new('contenu'),
             DateTimeField::new('createdAt'),
 
-            ImageField::new('image'),
+            ImageField::new('imageFile')
+            ->setFormType(VichImageType::class)
+                ->setLabel('Image'),
+
 
         ];
     }

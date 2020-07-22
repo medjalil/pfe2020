@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Product;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -22,7 +23,9 @@ class ProductCrudController extends AbstractCrudController
         return [
             TextField::new('name'),
             TextField::new('description'),
-            ImageField::new('image'),
+            ImageField::new('imageFile')
+            ->setFormType(VichImageType::class)
+                ->setLabel('Image'),
 
         ];
     }

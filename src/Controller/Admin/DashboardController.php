@@ -1,24 +1,27 @@
 <?php
 
 namespace App\Controller\Admin;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
-use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Actualite;
+use App\Entity\Users;
 use App\Entity\Contact;
 use App\Entity\Product;
-use App\Entity\Users;
+use App\Entity\Actualite;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 
 class DashboardController extends AbstractDashboardController
 {
     /**
      * @Route("/admin", name="admin")
+     * @Security("is_granted('ROLE_ADMIN')")
      */
     public function index(): Response
     {
+        
         
         return parent::index();
     }
@@ -48,11 +51,11 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
         
       yield  MenuItem::section('Blog');
-      yield MenuItem::linkToCrud('Actualite', 'fa fa-tags', Actualite::class);
-      yield  MenuItem::linkToCrud('Contact', 'fa fa-file-text',Contact::class);
+      yield MenuItem::linkToCrud('Actualite', 'fa fa-tags',Actualite::class);
+      yield  MenuItem::linkToCrud('Product', 'fa fa-plug',Product::class);
 
       yield MenuItem::section('Users');
-      yield MenuItem::linkToCrud('Product', 'fa fa-comment', Product::class);
+      yield MenuItem::linkToCrud('Contact', 'fa fa-phone',Contact::class);
       yield  MenuItem::linkToCrud('Users', 'fa fa-user', Users::class);
 
 
@@ -73,5 +76,6 @@ class DashboardController extends AbstractDashboardController
 
         return $product;
     }
+    
 
 }
