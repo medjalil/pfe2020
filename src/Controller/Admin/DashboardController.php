@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 use App\Entity\Users;
+use App\Entity\Equipe;
 use App\Entity\Contact;
 use App\Entity\Product;
 use App\Entity\Actualite;
@@ -45,6 +46,7 @@ class DashboardController extends AbstractDashboardController
             ->setTextDirection('ltr')
         ;
     }
+  
 
     public function configureMenuItems(): iterable
     {
@@ -53,6 +55,8 @@ class DashboardController extends AbstractDashboardController
       yield  MenuItem::section('Blog');
       yield MenuItem::linkToCrud('Actualite', 'fa fa-tags',Actualite::class);
       yield  MenuItem::linkToCrud('Product', 'fa fa-plug',Product::class);
+      yield  MenuItem::linkToCrud('Equipe',"fa fa-users" ,Equipe::class);
+
 
       yield MenuItem::section('Users');
       yield MenuItem::linkToCrud('Contact', 'fa fa-phone',Contact::class);
