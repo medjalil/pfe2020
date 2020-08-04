@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\EquipeRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use DateTimeImmutable;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -45,6 +47,13 @@ class Equipe
      * @ORM\Column(type="string", length=255)
      */
     private $service;
+
+   
+
+    public function __construct()
+    {
+        $this->lieu = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -116,6 +125,37 @@ class Equipe
     public function setUpdated(?\DateTimeInterface $updated): self
     {
         $this->updated = $updated;
+        return $this;
+    }
+
+    /**
+     * @return Collection|Project[]
+     */
+    public function getLieu(): Collection
+    {
+        return $this->lieu;
+    }
+
+    public function addLieu(Project $lieu): self
+    {
+        if (!$this->lieu->contains($lieu)) {
+            $this->lieu[] = $lieu;
+            $lieu->setRealtion($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLieu(Project $lieu): self
+    {
+        if ($this->lieu->contains($lieu)) {
+            $this->lieu->removeElement($lieu);
+            // set the owning side to null (unless already changed)
+            if ($lieu->getRealtion() === $this) {
+                $lieu->setRealtion(null);
+            }
+        }
+
         return $this;
     }
 }

@@ -65,6 +65,13 @@ class BlogController extends AbstractController
         'form'=>$form->createView()]);
         
     }
+    /**
+    * @Route("/about",name="about")
+    */
+    public function about(){
+        return $this->render('product/about.html.twig');
+        
+    }
    
   
   }

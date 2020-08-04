@@ -13,7 +13,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
-
 class DashboardController extends AbstractDashboardController
 {
     /**
