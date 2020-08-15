@@ -2,28 +2,29 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Equipe;
+use App\Entity\Service;
 use Vich\UploaderBundle\Form\Type\VichImageType;
-
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
-class EquipeCrudController extends AbstractCrudController
+class ServiceCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Equipe::class;
+        return Service::class;
     }
 
-   
+    
     public function configureFields(string $pageName): iterable
     {
-        return [   
-                   TextField::new('Nom'),
-            TextField::new('service'),
-            
+        return [
+            IntegerField::new('id', 'ID')->onlyOnIndex(),
+
+            TextField::new('nomService'),
+            TextField::new('description'),
             ImageField::new('imageFile')
             ->setFormType(VichImageType::class)
                 ->setLabel('Image'),

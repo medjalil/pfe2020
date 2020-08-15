@@ -2019,9 +2019,10 @@ background-position: center;  }
     -o-transform: translate(5px, 0); } }
     .slider-area .hero__caption h1 {
       font-size: 50px;
+   
       font-weight: 900;
       margin-bottom: 14px;
-      color: #ffffff;
+      color: black;
       font-family: 'Barlow', sans-serif;
       line-height: 1.2;
       text-transform: uppercase; }

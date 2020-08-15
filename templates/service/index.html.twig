@@ -1,0 +1,38 @@
+{% extends 'base.html.twig'%}
+{% block title %}Service{% endblock %}
+
+{% block body %}
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Equipe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+		<!-- CSS here -->
+    <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
+    <link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/> 
+
+        {% for service in services %}
+        <div class="services-area d-flex justify-content-lg-between">
+            <div class="single-services s-bg mb-30">
+                <div class="services-icon">
+                    <img src="{{vich_uploader_asset(service,'imageFile')}}" alt="">
+                </div>
+                <div class="services-caption">
+                    <h4>{{service.nomService}}</h4>
+                    <p> {{service.description}}</p>
+                </div>
+                <div class="services-btn">
+                    <a href="{{path('service_show',{'id': service.id})}}" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}"  alt="Symfony!"/>
+</a>
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+                    
+                    <!-- serviceEnd -->
+            </main>
+            </body>
+{% endblock %}
