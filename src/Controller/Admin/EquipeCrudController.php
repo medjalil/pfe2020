@@ -7,6 +7,7 @@ use Vich\UploaderBundle\Form\Type\VichImageType;
 
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
@@ -21,11 +22,13 @@ class EquipeCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [   
-                   TextField::new('Nom'),
+            IntegerField::new('id', 'ID')->onlyOnIndex(),
+            TextField::new('Nom'),
             TextField::new('service'),
             
             ImageField::new('imageFile')
             ->setFormType(VichImageType::class)
+            ->setBasePath("/products/images")
                 ->setLabel('Image'),
 
         ];

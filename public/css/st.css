@@ -1997,7 +1997,7 @@ background-position: center;  }
     .slider-area .hero__caption::after {
       position: absolute;
       content: "";
-      background-image:url(../images/hero_arrow.png);
+      background-image:url(../images/25.jpg);
       left: 0;
       right: 0;
       bottom: -26px;

@@ -19,6 +19,7 @@ class DashboardController extends AbstractDashboardController
 {
     /**
      * @Route("/admin", name="admin")
+     * @Security("is_granted('ROLE_USER')")
      * @Security("is_granted('ROLE_ADMIN')")
      */
     public function index(): Response
@@ -34,7 +35,7 @@ class DashboardController extends AbstractDashboardController
             // the name visible to end users
             ->setTitle('ACME Corp.')
             // you can include HTML contents too (e.g. to link to an image)
-            ->setTitle(' Carlos<span class="text-small">hassen</span>')
+            ->setTitle(' DIAMANT  <span class="text-small">TECHNOLOGY SOLAR</span>')
 
             // the path defined in this method is passed to the Twig asset() function
             ->setFaviconPath('favicon.svg')

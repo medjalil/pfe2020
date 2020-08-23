@@ -152,7 +152,7 @@
                             <p  class="safe-pera-two"> Dotés d'une expérience industrielle dans la fabrication de cellules solaires et d'un partenariat tout au long de la chaîne de valeur du solaire, nous savons quelle(s) technologie(s) recommander à nos clients pour assurer leur tranquillité d'esprit dans leur investissement. </p>
                             <p  class="safe-pera-three"> </p>
                             <!-- btn -->
-                            <a href="/about" class="btn">A Propos Nous</a>
+                            <a href="/about" class="btn">Qui sommes-nous?</a>
                         </div>
                     </div>
                     <div class="col-xl-5 offset-xl-1 col-lg-6 pl-0">
@@ -364,49 +364,53 @@
             </div>
         </div>
         <!-- Team End -->
+        <section class="sections about">
+	<div class="container">
+		<div class="section-header text-center">
+			<h2 class="section-title">Les actualités  </h2>
+			<div class="line"><span></span>
+    
+      
+			</div></div></div></section>
+            <br> <br>
         
-       
+        {% for actualite in actualites%}
+        {% if actualite.id  in [14, 15, 16] %}
+            <div class="about">
+    <div class="row">
+		<div class="col-md-6">
+			<div class="about-info">
+				<h3>Bienvenu<span> Dans DTS Site</span><br>
+        {{actualite.titre}}</h3>
+				<p class="about-info-desc">
+			{{actualite.contenu}}
+        </p>
+        <br>
+        
+        <a href="{{path('actualite_show',{'id': actualite.id})}}" class="about-info-btn">Read more</a>
 
-        <!-- David Droga start -->
-        <div class="david-droga-area section-padding30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <!-- single-david -->
-                        <div class="single-david mb-30">
-                            <div class="david-img">
-                                <img src="{{ asset('images/team/h1__team.png')}}" alt="">
-                            </div>
-                            <div class="david-captoin">
-                                <ul class="david-info">
-                                    <li>November 24, 2020 </li>
-                                    <li> Manufacturing</li>
-                                </ul>
-                                <h2><a href="single-blog.html">David Droga Still Has Faith Advertising Dorga</a></h2>
-                                <a href="single-blog.html" class="d-btn">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <!-- single-david -->
-                        <div class="single-david mb-30">
-                            <div class="david-img">
-                                <img src="{{ asset('images/team/h2__team.png')}}"alt="">
-                            </div>
-                            <div class="david-captoin">
-                                <ul class="david-info">
-                                    <li>November 24, 2020 </li>
-                                    <li> Manufacturing</li>
-                                </ul>
-                                <h2><a href="single-blog.html">David Droga Still Has Faith Advertising Dorga</a></h2>
-                                <a href="single-blog.html" class="d-btn">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-               </div>
+ 
+			</div>
+			
+		</div>
+    <br>
+				<div class="col-md-6">
+					<div class="about-img">
+						<img src="{{vich_uploader_asset(actualite,'imageFile')}}">
             </div>
-        </div>
-        <!-- David Droga End -->
+
+
+            </div>
+
+
+</div>
+<br>
+{%endif%}
+            {% endfor %}
+
+
+    
+               
 
        
     </main>

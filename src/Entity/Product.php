@@ -53,6 +53,11 @@ class Product {
      */
     private $created_at;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prix;
+
     public function __construct() {
         $this->created_at = new \DateTime('now');
     }
@@ -134,6 +139,18 @@ class Product {
     public function setUpdated(?\DateTimeInterface $updated): self
     {
         $this->updated = $updated;
+        return $this;
+    }
+
+    public function getPrix(): ?string
+    {
+        return $this->prix;
+    }
+
+    public function setPrix(string $prix): self
+    {
+        $this->prix = $prix;
+
         return $this;
     }
 

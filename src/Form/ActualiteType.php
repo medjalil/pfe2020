@@ -29,4 +29,5 @@ class ActualiteType extends AbstractType
 
         ]);
     }
+    
 }

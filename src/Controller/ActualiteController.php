@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/actualite")
+ * @Route("/")
  */
 
 class ActualiteController extends AbstractController
@@ -25,7 +25,7 @@ class ActualiteController extends AbstractController
      */
     public function index(ActualiteRepository $ActualiteRepository)
     {
-        return $this->render('actualite/index.html.twig', [
+        return $this->render('blog/home.html.twig', [
             'controller_name' => 'ActualiteController',
 
             'actualites' => $ActualiteRepository->findAll(),

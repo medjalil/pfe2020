@@ -23,6 +23,7 @@ class ProductCrudController extends AbstractCrudController
         return [
             TextField::new('name'),
             TextField::new('description'),
+            TextField::new('prix'),
             ImageField::new('imageFile')
             ->setFormType(VichImageType::class)
                 ->setLabel('Image'),

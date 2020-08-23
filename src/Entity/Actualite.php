@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Entity;
+
 use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
+
 
 
 /**
@@ -32,12 +34,13 @@ class Actualite
     
       /**
      * @ORM\Column(type="string", length=255)
+     * @var string|null
      */
     private $image;
 
      /**
      * @Vich\UploadableField(mapping="products", fileNameProperty="image")
-     * @var File
+     * @var string|null
      */
     private $imageFile;
 
@@ -107,7 +110,7 @@ class Actualite
 
         if (null !== $imageFile) {
            
-            $this->updatedAt = new DateTimeImmutable();
+            $this->updated_at = new \DateTime('now');
         }
     }
    
@@ -140,6 +143,19 @@ class Actualite
         $this->updated = $updated;
         return $this;
     }
+    /**
+    * Get title
+    *
+    * @return string
+    */
+public function getTitle()
+{
+       return $this->title;
+}
+
+public function __toString() {
+       return $this->title;
+}
 
    
     
