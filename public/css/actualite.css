@@ -21,7 +21,7 @@
 	margin-bottom: 25px;
 }
 .about .about-img img{
-	width: 30%;
+	width: 50%;
 	height: 10%;
 	
 }
@@ -29,13 +29,18 @@
 	.about .about-info h3{
 		font-size: 20px;
 	}
+	.about .about-info .about-info-btn{
+
+		padding: 5px 10px;
+		
+		
+	
+	
+	}
 }
 	@media (min-width:576px) and (max-width:768px){
 .about .about-info{
-		text-align: center;
-
-
-}
+		text-align: center;}
 }
 /*about us*/
 .section-title{

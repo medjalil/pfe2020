@@ -4,6 +4,6 @@ swiftmailer:
     port: 465
     encryption: ssl
     host: smtp.gmail.com
-    username: 'facturation.abdeljalil@gmail.com'
-    password: '55256020'
+    username: 'dtstataouine@gmail.com'
+    password: '123456789AAaa'
     spool: { type: 'memory' }

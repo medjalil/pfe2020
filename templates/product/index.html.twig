@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Product index{% endblock %}
+{% block title %}Nos Produits!{% endblock %}
 
 {% block body %}
 <head>
@@ -33,22 +33,25 @@
 	<div class="container">
 		<div class="section-header text-center">
 			<h2 class="section-title">Nos Produits</h2>
-			<div class="line"><span></span>
+            <div class="line"><span></span>
+            
     
       
-			</div></div></div></section>
+            </div></div></div></section>
+            <br> <br>
           
             
             {% for product in products %}
        
-            <div class="gallery-area section-padding2">
+            <div class="gallery-area">
             <div class="container-fluid p-0">
+            
                 <div class="row no-gutters">
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="gallery-box">
                             <div class="single-gallery">
                                 <div class="gallery-img">
-                                    <img src="{{vich_uploader_asset(product,'imageFile')}}" alt="" style="    width:40%,height: 3px;">
+                                    <img src="{{vich_uploader_asset(product,'imageFile')}}" alt="" style="">
                                 </div>
                                 <div class="g-caption1">
                                     <span> {{product.prix}}</span>
@@ -59,6 +62,7 @@
 
                                     <h4>{{product.name}}</h4>
                                     <p>{{product.description}}</p>
+                            
                                     <a href="{{path('product_show',{'id': product.id})}}" class="read_btn">Read more</a>
                                 </div>
                             </div>

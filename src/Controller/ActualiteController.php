@@ -21,11 +21,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class ActualiteController extends AbstractController
 {
     /**
-     * @Route("/", name="actualite_index")
+     * @Route("/actualite", name="actualite_index", methods={"GET"})
      */
     public function index(ActualiteRepository $ActualiteRepository)
     {
-        return $this->render('blog/home.html.twig', [
+        return $this->render('actualite/index.html.twig', [
             'controller_name' => 'ActualiteController',
 
             'actualites' => $ActualiteRepository->findAll(),
@@ -56,7 +56,7 @@ class ActualiteController extends AbstractController
 }
 
     /**
-     * @Route("/{id}", name="actualite_show", methods={"GET"})
+     * @Route("/actualite/{id<\d+>}", name="actualite_show", methods={"GET"})
      */
 
     public function show(Actualite $actualite):Response

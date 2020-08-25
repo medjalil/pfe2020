@@ -20,7 +20,7 @@ class DashboardController extends AbstractDashboardController
     /**
      * @Route("/admin", name="admin")
      * @Security("is_granted('ROLE_USER')")
-     * @Security("is_granted('ROLE_ADMIN')")
+     * Security("is_granted('ROLE_ADMIN')")
      */
     public function index(): Response
     {
@@ -28,6 +28,13 @@ class DashboardController extends AbstractDashboardController
         
         return parent::index();
     }
+    public function adminDashboard()
+{
+    $this->denyAccessUnlessGranted('ROLE_ADMIN','ROLE_USER');
+
+    // or add an optional message - seen by developers
+    $this->denyAccessUnlessGranted('ROLE_ADMIN','ROLE_USER',null, 'User tried to access a page without having ROLE_ADMIN');
+}
 
     public function configureDashboard(): Dashboard
     {

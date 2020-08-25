@@ -1997,7 +1997,7 @@ background-position: center;  }
     .slider-area .hero__caption::after {
       position: absolute;
       content: "";
-      background-image:url(../images/25.jpg);
+      background-image:url(../images/hero_arrow.png);
       left: 0;
       right: 0;
       bottom: -26px;
@@ -2022,7 +2022,7 @@ background-position: center;  }
    
       font-weight: 900;
       margin-bottom: 14px;
-      color: black;
+      color: rgb(248, 135, 6);
       font-family: 'Barlow', sans-serif;
       line-height: 1.2;
       text-transform: uppercase; }
@@ -2039,10 +2039,10 @@ background-position: center;  }
           font-size: 35px;
           line-height: 1.2; } }
     .slider-area .hero__caption p {
-      font-size: 18px;
+      font-size: 22px;
       line-height: 30px;
       margin-bottom: 39px;
-      color: #ffffff;
+      color: #0b1c39;
       margin-bottom: 25px;
       padding-right: 49px; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2240,19 +2240,21 @@ background-position: center;  }
   position: relative;
   
   
+  
+  
   }
   .gallery-area .gallery-box .single-gallery::before {
     position: absolute;
-    width: 480px;
-    height: 750px;
+    width: 380px;
+    height: 650px;
     bottom: 0;
     content: ""; }
   .gallery-area .gallery-box .single-gallery::after {
     content: "";
     background: #f27420;
     position: absolute;
-    width: 480px;
-    height: 750px;
+    width: 380px;
+    height: 650px;
     top: 0;
     left: 0;
     bottom: 0;
@@ -2270,8 +2272,8 @@ background-position: center;  }
 
    
   .gallery-area .gallery-box .single-gallery .gallery-img img {
-    width: 480px; 
-height: 750px;
+    width: 380px; 
+height: 650px;
 }
   .gallery-area .gallery-box .single-gallery .g-caption1 {
     position: absolute;
@@ -2757,7 +2759,9 @@ z-index: 0;}
   background: #010b1d; }
 
 .footer-bottom-area .footer-border {
+
   border-top: 1px solid #2d3544;
+  
   padding: 33px 0px 20px; }
 
 .footer-bottom-area .footer-copy-right p {

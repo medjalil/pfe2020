@@ -41,7 +41,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-6 col-lg-8 col-md-8">
-                                <div class="hero__caption" style="background-image:url('{{ asset('images/color_bg.png') }}')">
+                                <div class="hero__caption" style="background-image:url('{{ asset('images/jaune.png') }}')">
                                     <h1 data-animation="fadeInUp" data-delay=".4s">DIAMANT TECHNOLOGY SOLAR </h1>
                                     <p data-animation="fadeInUp" data-delay=".6s">
 
@@ -373,45 +373,7 @@
       
 			</div></div></div></section>
             <br> <br>
-        
-        {% for actualite in actualites%}
-        {% if actualite.id  in [14, 15, 16] %}
-            <div class="about">
-    <div class="row">
-		<div class="col-md-6">
-			<div class="about-info">
-				<h3>Bienvenu<span> Dans DTS Site</span><br>
-        {{actualite.titre}}</h3>
-				<p class="about-info-desc">
-			{{actualite.contenu}}
-        </p>
-        <br>
-        
-        <a href="{{path('actualite_show',{'id': actualite.id})}}" class="about-info-btn">Read more</a>
-
- 
-			</div>
-			
-		</div>
-    <br>
-				<div class="col-md-6">
-					<div class="about-img">
-						<img src="{{vich_uploader_asset(actualite,'imageFile')}}">
-            </div>
-
-
-            </div>
-
-
-</div>
-<br>
-{%endif%}
-            {% endfor %}
-
-
-    
-               
-
+       
        
     </main>
   

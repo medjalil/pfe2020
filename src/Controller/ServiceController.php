@@ -49,7 +49,7 @@ class ServiceController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="service_show", methods={"GET"})
+     * @Route("/{id<\d+>}", name="service_show", methods={"GET"})
      */
     public function show(Service $service): Response
     {

@@ -143,20 +143,7 @@ class Actualite
         $this->updated = $updated;
         return $this;
     }
-    /**
-    * Get title
-    *
-    * @return string
-    */
-public function getTitle()
-{
-       return $this->title;
-}
-
-public function __toString() {
-       return $this->title;
-}
-
+  
    
     
 }
