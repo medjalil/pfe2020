@@ -13,10 +13,21 @@
 		<!-- CSS here -->
     <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
     <link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/> 
+    <main>
+    <section class="sections about">
+	<div class="container">
+		<div class="section-header text-center">
+			<h2 class="section-title">Nos Services</h2>
+            <div class="line"><span></span>
+            
+    
+      
+            </div></div></div></section>
+            <br> <br>
 
         {% for service in services %}
         <div class="services-area d-flex justify-content-lg-between">
-            <div class="single-services s-bg mb-30">
+            <div class="single-services row-col-w-100">
                 <div class="services-icon">
                     <img src="{{vich_uploader_asset(service,'imageFile')}}" alt="">
                 </div>
@@ -31,8 +42,11 @@
             </div>
             </div>
             {% endfor %}
+            <br>
                     
                     <!-- serviceEnd -->
             </main>
             </body>
+            
 {% endblock %}
+

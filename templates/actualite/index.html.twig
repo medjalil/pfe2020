@@ -17,6 +17,8 @@
     <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
 
     <link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/> 
+    <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet"/> 
+
     
 
    </head>
@@ -38,39 +40,34 @@
 
 <br>
 <br>
-            {% for actualite in actualites%}
-            <div class="about">
-    <div class="row">
-		<div class="col-md-6">
-			<div class="about-info">
-				<h3>Bienvenu<span> Dans DTS Site</span><br>
-        {{actualite.titre}}</h3>
-				<p class="about-info-desc">
-			{{actualite.contenu}}
-        </p>
-        <br>
-        
-        <a href="{{path('actualite_show',{'id': actualite.id})}}" class="about-info-btn">
+
+{% for actualite in actualites%}
+<section class="blog_area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="blog_left_sidebar">
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                            <img src="{{vich_uploader_asset(actualite,'imageFile')}}">
+
+                                <a href="#" class="blog_item_date">
+                                    <h3>{{ actualite.createdAt|date("m/d/Y", "Europe/Paris")}}</h3>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="single-blog.html">
+                                <h2>Bienvenu<span> Chez DTS </span><br>
+        {{actualite.titre}}</h2>
+                                </a>
+                                <p>{{actualite.contenu}}</p>
+                                <a href="{{path('actualite_show',{'id': actualite.id})}}" class="about-info-btn">
 Lire la suite</a>
-      
-        
+                               
+                            </div>
+                        </article>
 
- 
-			</div>
-			
-		</div>
-    <br>
-				<div class="col-md-6">
-					<div class="about-img">
-						<img src="{{vich_uploader_asset(actualite,'imageFile')}}">
-            </div>
-
-
-            </div>
-
-
-</div>
-<br>
             {% endfor %}
 
 </main>
@@ -81,3 +78,4 @@ Lire la suite</a>
       
 
 {% endblock %}
+
