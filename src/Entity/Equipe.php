@@ -10,13 +10,12 @@ use DateTimeImmutable;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 
-
 /**
  * @ORM\Entity(repositoryClass=EquipeRepository::class)
  * @Vich\Uploadable
  */
-class Equipe
-{
+class Equipe {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -33,12 +32,14 @@ class Equipe
      * @ORM\Column(type="string", length=255)
      */
     private $image;
-      /**
+
+    /**
      * @Vich\UploadableField(mapping="products", fileNameProperty="image")
      * @var File
      */
     private $imageFile;
-      /**
+
+    /**
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updatedAt;
@@ -48,73 +49,61 @@ class Equipe
      */
     private $service;
 
-   
-
-    public function __construct()
-    {
+    public function __construct() {
         $this->lieu = new ArrayCollection();
     }
 
-    public function getId(): ?int
-    {
+    public function getId(): ?int {
         return $this->id;
     }
 
-    public function getNom(): ?string
-    {
+    public function getNom(): ?string {
         return $this->Nom;
     }
 
-    public function setNom(string $Nom): self
-    {
+    public function setNom(string $Nom): self {
         $this->Nom = $Nom;
 
         return $this;
     }
 
-    public function getImage(): ?string
-    {
+    public function getImage(): ?string {
         return $this->image;
     }
 
-    public function setImage(string $image): self
-    {
+    public function setImage(string $image): self {
         $this->image = $image;
 
         return $this;
     }
-    public function getImageFile(): ?File
-    {
+
+    public function getImageFile(): ?File {
         return $this->imageFile;
     }
-  
-    public function setImageFile(?File $imageFile = null)
-    {
+
+    public function setImageFile(?File $imageFile = null) {
         $this->imageFile = $imageFile;
 
         if (null !== $imageFile) {
-           
+
             $this->updatedAt = new DateTimeImmutable();
         }
     }
 
-    public function getService(): ?string
-    {
+    public function getService(): ?string {
         return $this->service;
     }
 
-    public function setService(string $service): self
-    {
+    public function setService(string $service): self {
         $this->service = $service;
 
         return $this;
     }
 
-/**
+    /**
      * @return \DateTimeInterface|null
      */
-    public function getUpdated(): ?\DateTimeInterface
-    {
+    public function getUpdated(): ?\DateTimeInterface {
         return $this->updated;
     }
 
@@ -122,40 +111,9 @@ class Equipe
      * @param \DateTimeInterface|null $updated
      * @return $this
      */
-    public function setUpdated(?\DateTimeInterface $updated): self
-    {
+    public function setUpdated(?\DateTimeInterface $updated): self {
         $this->updated = $updated;
         return $this;
     }
 
-    /**
-     * @return Collection|Project[]
-     */
-    public function getLieu(): Collection
-    {
-        return $this->lieu;
-    }
-
-    public function addLieu(Project $lieu): self
-    {
-        if (!$this->lieu->contains($lieu)) {
-            $this->lieu[] = $lieu;
-            $lieu->setRealtion($this);
-        }
-
-        return $this;
-    }
-
-    public function removeLieu(Project $lieu): self
-    {
-        if ($this->lieu->contains($lieu)) {
-            $this->lieu->removeElement($lieu);
-            // set the owning side to null (unless already changed)
-            if ($lieu->getRealtion() === $this) {
-                $lieu->setRealtion(null);
-            }
-        }
-
-        return $this;
-    }
 }
