@@ -143,9 +143,6 @@
     "ocramius/proxy-manager": {
         "version": "2.2.3"
     },
-    "pagerfanta/pagerfanta": {
-        "version": "v2.3.0"
-    },
     "php": {
         "version": "7.3"
     },
@@ -248,9 +245,6 @@
     },
     "symfony/dependency-injection": {
         "version": "v4.4.10"
-    },
-    "symfony/deprecation-contracts": {
-        "version": "v2.1.2"
     },
     "symfony/doctrine-bridge": {
         "version": "v4.4.10"
