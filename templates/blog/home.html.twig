@@ -1,57 +1,20 @@
 {% extends 'base.html.twig'%}
 
- 
-
-
-
-
-
-
-
-
 {% block body %}
-<head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Home</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
-		<!-- CSS here -->
-    <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
-     <link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/>
-
-    
-
-   </head>
-
-   <body>
-       
-   
     <main>
-
         <!-- slider Area Start-->
         <div class="slider-area ">
-            
-                <div class="single-slider  hero-overly slider-height d-flex align-items-center" style="background-image:url('{{ asset('images/25.jpg') }}')">
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-8 col-md-8">
-                                <div class="hero__caption" style="background-image:url('{{ asset('images/jaune.png') }}')">
-                                    <h1 data-animation="fadeInUp" data-delay=".4s">DIAMANT TECHNOLOGY SOLAR </h1>
-                                    <p data-animation="fadeInUp" data-delay=".6s">
-
-
-
-<p>Vous voulez economisez jusqu'a 100% sur votre facture steg ? Nos solutions photovoltaiques sont adaptées a vos besoins et habitudes</p>
-                                    <!-- Hero-btn -->
-                                    <div class="hero__btn" data-animation="fadeInUp" data-delay=".7s">
-                                        <a href="/product" class="btn hero-btn">Notre Produit</a>
-                                    </div>
+            <div class="single-slider  hero-overly slider-height d-flex align-items-center" style="background-image:url('{{ asset('images/25.jpg') }}')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-8 col-md-8">
+                            <div class="hero__caption" style="background-image:url('{{ asset('images/jaune.png') }}')">
+                                <h1 data-animation="fadeInUp" data-delay=".4s">DIAMANT TECHNOLOGY SOLAR </h1>
+                                <p data-animation="fadeInUp" data-delay=".6s">
+                                <p>Vous voulez economisez jusqu'a 100% sur votre facture steg ? Nos solutions photovoltaiques sont adaptées a vos besoins et habitudes</p>
+                                <!-- Hero-btn -->
+                                <div class="hero__btn" data-animation="fadeInUp" data-delay=".7s">
+                                    <a href="/product" class="btn hero-btn">Notre Produit</a>
                                 </div>
                             </div>
                         </div>
@@ -63,14 +26,13 @@
         <!-- slider Area End-->
         <br>
         <section class="sections about">
-	<div class="container">
-		<div class="section-header text-center">
-			<h2 class="section-title">Notre Services </h2>
-			<div class="line"><span></span>
-    
-      
-			</div></div></div></section>
-
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Notre Services </h2>
+                    <div class="line"><span></span></div>
+                </div>
+            </div>
+        </section>
         <!-- Services DTS-->
         <div class="services-area d-flex justify-content-lg-between">
             <div class="single-services s-bg mb-30">
@@ -83,12 +45,12 @@
                 </div>
                 <div class="services-btn">
                     <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt="Symfony!"/>
-</a>
+                    </a>
                 </div>
             </div>
             <div class="single-services mb-30">
                 <div class="services-icon">
-                <img src="{{ asset('images/icon/5.ico') }}" alt="Symfony!"/>
+                    <img src="{{ asset('images/icon/5.ico') }}" alt="Symfony!"/>
                 </div>
                 <div class="services-caption">
                     <h4>Service Exploitation & Maintenance</h4>
@@ -112,7 +74,7 @@
             </div>
             <div class="single-services mb-30">
                 <div class="services-icon">
-                <img src="{{ asset('images/icon/6.ico') }}" alt="Symfony!"/>
+                    <img src="{{ asset('images/icon/6.ico') }}" alt="Symfony!"/>
                 </div>
                 <div class="services-caption">
                     <h4>Photovoltaïque pour irrigation</h4>
@@ -124,23 +86,18 @@
             </div>
             <div class="single-services mb-30">
                 <div class="services-icon">
-                <img src="{{ asset('images/icon/3.ico') }}" alt="Symfony!"/>
+                    <img src="{{ asset('images/icon/3.ico') }}" alt="Symfony!"/>
                 </div>
                 <div class="services-caption">
                     <h4>Photovoltaïque Commercial & Industriel</h4>
                     <p>Des panneaux photovoltaïques ultra-résistants et performants	Des solutions pour le stockage de l’électricité solaire	Une qualité premium « Made in Germany »	30 ans de garantie produit et rendement	Un service zéro risque d’assurance
-</p>
+                    </p>
                 </div>
                 <div class="services-btn">
                     <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt="sy"></a>
                 </div>
             </div>
-            
-            
         </div>
-        
-        <!-- Services Area End -->
-
         <!-- Safe Industery Start -->
         <div class="safe-industery-area section-padd-top30">
             <div class="container">
@@ -164,7 +121,7 @@
                             <div class="safe-alert-box">
                                 <div class="row">
                                     <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 d-none d-sm-block">
-                                        
+
                                         <div class="safe-alert" style="background-image:url('{{ asset('images/color_bg.png') }}')">
                                             <img src="{{ asset('images/icon/aleart_icon.png') }}" alt="">
                                             <h4>DTS OBJECTIF</h4>
@@ -180,16 +137,15 @@
         </div>
         <!-- Safe Industery End -->
         <section class="sections about">
-	<div class="container">
-		<div class="section-header text-center">
-			<h2 class="section-title">Nos Produits</h2>
-			<div class="line"><span></span>
-    
-      
-			</div></div></div></section>
-            <br>
-            <br>
-
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Nos Produits</h2>
+                    <div class="line"><span></span></div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
         <!-- Gallery Start-->
         <div class="gallery-area">
             <div class="container-fluid p-0">
@@ -279,28 +235,24 @@
         <br>
         <br>
         <!-- Gallery End-->
-      
-
         <!-- Team Start -->
         <section class="sections about">
-	<div class="container">
-		<div class="section-header text-center">
-			<h2 class="section-title">Notre Equipe </h2>
-			<div class="line"><span></span>
-    
-      
-			</div></div></div></section>
-            
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Notre Equipe </h2>
+                    <div class="line"><span></span></div>
+                </div>
+            </div>
+        </section>
         <div class="team-area section2-padding30">
             <div class="container">
                 <div class="row">
                     <!-- Team Info -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="team-info mb-30 pt-45">
-                          <h2>Our Team Best Mambers</h2>  
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ua. Ut enim ad minim veni.</p>
-
-                          <a href='equipe' class="btn">Notre Equipe</a>
+                            <h2>Our Team Best Mambers</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ua. Ut enim ad minim veni.</p>
+                            <a href='equipe' class="btn">Notre Equipe</a>
                         </div>
                     </div>
                     <!-- single Tem -->
@@ -321,7 +273,7 @@
                                 <img src="{{ asset('images/team/h2__team.png') }}" alt="">
                             </div>
                             <div class="team-caption">
-                                 <span><a href="#">Bruce Roberts</a></span>
+                                <span><a href="#">Bruce Roberts</a></span>
                                 <p>Team Officer</p>
                             </div>
                         </div>
@@ -332,7 +284,7 @@
                                 <img src="{{ asset('images/team/h3__team.png') }}" alt="">
                             </div>
                             <div class="team-caption">
-                                 <span><a href="#">Bruce Roberts</a></span>
+                                <span><a href="#">Bruce Roberts</a></span>
                                 <p>Team Officer</p>
                             </div>
                         </div>
@@ -343,7 +295,7 @@
                                 <img src="{{ asset('images/team/h4__team.png') }}" alt="">
                             </div>
                             <div class="team-caption">
-                                 <span><a href="#">Bruce Roberts</a></span>
+                                <span><a href="#">Bruce Roberts</a></span>
                                 <p>Team Officer</p>
                             </div>
                         </div>
@@ -351,11 +303,11 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
                             <div class="team-img">
-                            <img src="{{ asset('images/team/h5__team.png') }}" alt="">
+                                <img src="{{ asset('images/team/h5__team.png') }}" alt="">
 
                             </div>
                             <div class="team-caption">
-                                 <span><a href="#">Bruce Roberts</a></span>
+                                <span><a href="#">Bruce Roberts</a></span>
                                 <p>Team Officer</p>
                             </div>
                         </div>
@@ -365,24 +317,14 @@
         </div>
         <!-- Team End -->
         <section class="sections about">
-	<div class="container">
-		<div class="section-header text-center">
-			<h2 class="section-title">Les actualités  </h2>
-			<div class="line"><span></span>
-    
-      
-			</div></div></div></section>
-            <br> <br>
-            
-       
-       
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Les actualités  </h2>
+                    <div class="line"><span></span></div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
     </main>
-  
-  
-        
-    </body>
-</html>
-
-
-
 {% endblock %}

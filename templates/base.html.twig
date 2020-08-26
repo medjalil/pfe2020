@@ -1,108 +1,83 @@
-
 <!DOCTYPE html>
 <html>
     <head>
-    <title>{% block title %} DTS !!{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
-
-    {% block stylesheets %}
-{% endblock %}
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo1.png') }}">
-
-        
-        <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
-        <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet"/> 
-
-        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"/> 
-        <link href="{{ asset('css/slicknav.css') }}" rel="stylesheet"/> 
-        <link href="{{ asset('css/slick.css') }}" rel="stylesheet"/> 
-      
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+            {% block title %}Diamond Technology Solar{% endblock %}
+        </title>
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+            <link href="{{ asset('plugin/fontawesome/css/all.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/st.css') }}" rel="stylesheet"/>
+            <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet"/>
+            <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"/>
+            <link href="{{ asset('css/slicknav.css') }}" rel="stylesheet"/>
+            <link href="{{ asset('css/slick.css') }}" rel="stylesheet"/>
+        {% endblock %}
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo1.png') }}">
     </head>
     <body>
-    
-    
-    
-    <header>
-        <!-- Header Start -->
-       <div class="header-area">
-            <div class="main-header ">
-                <div class="header-top top-bg d-none d-lg-block">
-                   <div class="container">
-                       <div class="col-xl-12">
-                        <div class="row d-flex justify-content-between align-items-center">
-                            <div class="header-info-left">
-                                <ul>     
-                                    <li>Route de Médenine cité Abbes en face clinique lazhar Tataouine 3200,</li>
-                                    <li> Tataouine Nord, Tataouine, Tunisie</li>
-                                </ul>
+        <header>
+            <!-- Header Start -->
+            <div class="header-area">
+                <div class="main-header ">
+                    <div class="header-top top-bg d-none d-lg-block">
+                        <div class="container">
+                            <div class="col-xl-12">
+                                <div class="row d-flex justify-content-between align-items-center">
+                                    <div class="header-info-left">
+                                        <ul>
+                                            <li><i class="fas fa-map-marker-alt"></i> 72 Route de Médenine, Cité Abbés Tataouine 3200, Tunisie</li>
+                                            <li><i class="fas fa-phone-alt"></i> (+216) 75 857 120</li>
+                                        </ul>
+                                    </div>
+                                    <div class="header-info-right">
+                                        <ul>
+                                            <li><i class="fas fa-clock"></i> Lun - Vend | 9h:00 - 19h:00</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="header-info-right">
-                                <ul>     
-                                    <li>lun-vend/ 9:00 - 19:00 / Fermé le weekend
-</li>
-                                </ul>
+                        </div>
+                    </div>
+                    <div class="header-bottom  header-sticky">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <!-- Logo -->
+                                <div class="col-xl-2 col-lg-2 col-md-2">
+                                    <div class="logo">
+                                        <a href="/"><img src="{{asset('images/logo2.png')}}"     width="120px"></a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-10 col-lg-10 col-md-10">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu f-right d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a href="{{ path('home') }}">ACCUEIL</a></li>
+                                                <li><a href="{{ path('about') }}">À PROPOS</a></li>
+                                                <li><a href="/equipe">ÉQUIPE</a></li>
+                                                <li><a href="/product">PRODUITS</a></li>
+                                                <li><a href="/service">SERVICES</a></li>
+                                                <li><a href="/actualite">ACTUALITÉS</a>
+                                                <li><a href="{{ path('contact') }}">CONTACT</a></li>
+                                        </nav>
+                                    </div>
+                                </div>
+
                             </div>
-                       </div>
-                       </div>
-                   </div>
+                        </div>
+                    </div>
                 </div>
-    
-    <div class="header-bottom  header-sticky">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-1 col-md-1">
-                                <div class="logo">
-                                <a href="/"><img src="{{asset('images/logo2.png')}}" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-8 col-lg-8 col-md-8">
-                                <!-- Main-menu -->
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">                                                                                                                                     
-                                            <li><a href="/">Acceuil</a></li>
-                                            <li><a href="/equipe"> Notre Equipe</a></li>
-                                            <li><a href="/contact">Contact</a></li>
-                                            <li><a href="/about">Qui sommes-nous?</a>
-                                            <li><a href="/actualite">Actualités</a>
-                                            <li><a href="#">DTS</a>
-                                                <ul class="submenu">
-                                                <li><a href="/product">Nos Produits</a></li>
-                                                <li><a href="/service">Nos Services</a></li>
-                                                </ul>
-                                            
-                                           
-                                           
-                                      
-                                    </nav>
-                                </div>
-                            </div>  
-                              
-                             
-                            
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
-                    </div>
-                    </div>
-                   </div>
-                  </div>
-       </div>
-       
-       
-        
-        <!-- Header End -->
-    </header>
- 
+            </div>
+            <!-- Header End -->
+        </header>
         <div class="container">
             {% block body %}{% endblock %}
         </div>
-       
-         <!-- Want To Work Start -->
-         <div class="wantToWork-area w-padding">
+        <!-- Want To Work Start -->
+        <div class="wantToWork-area w-padding">
             <div class="container">
                 <div class="row d-flex align-items-end">
                     <div class="col-xl-6 col-lg-8 col-md-8">
@@ -111,142 +86,115 @@
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-4 col-md-4">
-                       <div class="wantToWork-btn f-right">
+                        <div class="wantToWork-btn f-right">
                             <a href='contact' class="white-btn">travaillons ensemble</a>
-                       </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Want To Work End -->
-
-        <!--
-  footer
---> <footer>
-       <!-- Footer Start-->
-       <div class="footer-area footer-bg footer-padding">
-        <div class="container">
-            <div class="row d-flex justify-content-between">
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                   <div class="single-footer-caption mb-50">
-                     <div class="single-footer-caption mb-30">
-                         <div class="footer-tittle">
-                             <h4>À propos de nous</h4>
-                             <div class="footer-pera">
-                                 <p>Assurer auprès du client un rôle de conseil et d’assistance dans le choix des solutions les mieux adaptées à son contexte.</p>
+        <footer>
+            <!-- Footer Start-->
+            <div class="footer-area footer-bg footer-padding">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <div class="footer-tittle">
+                                        <h4>About Us</h4>
+                                        <div class="footer-pera">
+                                            <p>Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                </div>
                             </div>
-                         </div>
-                     </div>
-                      <!-- logo -->
-                      <div class="footer-logo">
-                        <a href="index.html"><img src="{{asset('images/logo2.png')}}" alt=""></a>
-                      </div>
-                   </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                    <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle">
-                            <h4>INFORMATIONS DE CONTACT</h4>
-                            <ul>
-                                <li>
-                                <p> Addresse :Your address goes
-                                 here, your demo address.</p>
-                                </li>
-                                <li><a href="#">télephone :75848594</a></li>
-                    
-                            </ul>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Contact Info</h4>
+                                    <ul>
+                                        <li>
+                                            <p> Address :Your address goes
+                                                here, your demo address.</p>
+                                        </li>
+                                        <li><a href="#">Phone : +8880 44338899</a></li>
+                                        <li><a href="#">Our Photo Gellary</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Important Link</h4>
+                                    <ul>
+                                        <li><a href="#"> View Project</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Testimonial</a></li>
+                                        <li><a href="#">Proparties</a></li>
+                                        <li><a href="#">Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-5">
-                    <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle">
-                            <h4>Lien important</h4>
-                            <ul>
-                                <li><a href="/"> acceuil</a></li>
-                                <li><a href="/contact">Nous contacter</a></li>
-                                <li><a href="/equipe"> Notre Equipe</a></li>
-                                <li><a href="/product">Nos Produits</a></li>
-                                <li><a href="/actualite"> Nos Actualité</a></li>
-                                <li><a href="/service"> Nos Services</a></li>
-                            </ul>
+            </div>
+            <!-- footer-bottom aera -->
+            <div class="footer-bottom-area footer-bg">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col-xl-10 col-lg-10 ">
+                                <div class="footer-copy-right">
+                                    <p>
+                                        Copyright &copy;{{ "now"|date('Y')}} Tous droits réservés  | Ce site a été réalisé dans le cadre du projet de fin d'études  <i class="ti-heart" aria-hidden="true"></i> de l'étudiant  <a href="https://www.facebook.com/hassen.abbassi.35" target="_blank">Hassen Abbassi</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="footer-social f-right">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fab fa-behance"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                         <!-- Form -->
-                        
-    
-    <!-- footer-bottom aera -->
-    <div class="footer-bottom-area footer-bg">
-        <div class="container">
-            <div class="footer-border">
-                 <div class="row d-flex justify-content-between align-items-center">
-                     <div class="col-xl-10 col-lg-10 ">
-                         <div class="footer-copy-right">
-                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés  | Ce site a été réalisé dans le cadre du projet de fin d'études  <i class="ti-heart" aria-hidden="true"></i> de l'étudiant  <a href="https://www.facebook.com/hassen.abbassi.35" target="_blank">Hassen Abbassi</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                         </div>
-                     </div>
-                     
-                    </div>
-               </div>
-           </div>
-           
-       </div>
-                           
-       <!-- Footer End-->
-   </footer>
-   {% block javascripts %}
-        <script src="{{ asset('js/vendor/modernizr-3.5.0.min.js')}}"></script>
-        <script src="{{ asset('js/vendor/jquery-1.12.4.min.js')}}"></script>
-        <script src="{{ asset('js/popper.min.js')}}"></script>
-
-        <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-
-
-	    <!-- Jquery Mobile Menu -->
-
-        <script src="{{ asset('js/jquery.slicknav.min.js')}}"></script>
-		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
-        <script src="{{ asset('js/slick.min.js')}}"></script>
-        <!-- Date Picker -->
-
-        <script src="{{ asset('js/gijgo.min.js')}}"></script>
-        		<!-- One Page, Animated-HeadLin -->
-
-        <script src="{{ asset('js/wow.min.js')}}"></script>
-        <script src="{{ asset('js/animated.headline.js')}}"></script>
-        <script src="{{ asset('js/jquery.magnific-popup.js')}}"></script>
-        		<!-- Scrollup, nice-select, sticky -->
-
-        <script src="{{ asset('js/jquery.scrollUp.min.js')}}"></script>
-        <script src="{{ asset('js/jquery.nice-select.min.js')}}"></script>
-        <script src="{{ asset('js/jquery.sticky.js')}}"></script>
-
-     
-        
-
-
-
-
-        		<!-- Jquery Plugins, main Jquery -->	
-
-        <script src="{{ asset('js/plugins.js')}}"></script>
-        <script src="{{ asset('js/main.js')}}"></script>
-
-      
-
-       
-
-
-
-
-        
-        
+            </div>
+            <!-- Footer End-->
+        </footer>
+        {% block javascripts %}
+            <script src="{{ asset('js/vendor/modernizr-3.5.0.min.js')}}"></script>
+            <script src="{{ asset('js/vendor/jquery-1.12.4.min.js')}}"></script>
+            <script src="{{ asset('js/popper.min.js')}}"></script>
+            <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+            <!-- Jquery Mobile Menu -->
+            <script src="{{ asset('js/jquery.slicknav.min.js')}}"></script>
+            <!-- Jquery Slick , Owl-Carousel Plugins -->
+            <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
+            <script src="{{ asset('js/slick.min.js')}}"></script>
+            <!-- Date Picker -->
+            <script src="{{ asset('js/gijgo.min.js')}}"></script>
+            <!-- One Page, Animated-HeadLin -->
+            <script src="{{ asset('js/wow.min.js')}}"></script>
+            <script src="{{ asset('js/animated.headline.js')}}"></script>
+            <script src="{{ asset('js/jquery.magnific-popup.js')}}"></script>
+            <!-- Scrollup, nice-select, sticky -->
+            <script src="{{ asset('js/jquery.scrollUp.min.js')}}"></script>
+            <script src="{{ asset('js/jquery.nice-select.min.js')}}"></script>
+            <script src="{{ asset('js/jquery.sticky.js')}}"></script>
+            <!-- Jquery Plugins, main Jquery -->
+            <script src="{{ asset('js/plugins.js')}}"></script>
+            <script src="{{ asset('js/main.js')}}"></script>
         {% endblock %}
-
     </body>
 </html>
