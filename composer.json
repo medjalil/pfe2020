@@ -33,10 +33,10 @@
         "symfony/web-link": "4.4.*",
         "symfony/yaml": "4.4.*",
         "symfonycasts/reset-password-bundle": "^1.1",
+        "doctrine/doctrine-fixtures-bundle": "^3.3",
         "vich/uploader-bundle": "^1.14"
     },
     "require-dev": {
-        "doctrine/doctrine-fixtures-bundle": "^3.3",
         "symfony/debug-pack": "*",
         "symfony/maker-bundle": "^1.0",
         "symfony/profiler-pack": "^1.0",
