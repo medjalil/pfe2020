@@ -3,81 +3,61 @@
 {% block title %}Nos Produits!{% endblock %}
 
 {% block body %}
-<head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Industery HTML-5 Template </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
-		<!-- CSS here -->
-    <link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
+<head>   
+<link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
 <link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/> 
+</head>
 
-    
-
-   </head>
    <body>
-      
-                    
-
-       
    <main>
-       
+   
+   
+   <div class="slider-area ">
+   <div class="single-slider slider-height2 d-flex align-items-center" style="background-image:url('{{ asset('images/1.jpg') }}')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>produits</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-   <section class="sections about">
-	<div class="container">
-		<div class="section-header text-center">
-			<h2 class="section-title">Nos Produits</h2>
-            <div class="line"><span></span>
-            
-    
-      
-            </div></div></div></section>
-            <br> <br>
-          
-            
-            {% for product in products %}
-       
-            <div class="gallery-area">
-            <div class="container-fluid p-0 section-padding2">
-            
+        {% for product in products %}
+        
+        <div class="gallery-area section-padding2">
+            <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="gallery-box">
                             <div class="single-gallery">
                                 <div class="gallery-img">
-                                    <img src="{{vich_uploader_asset(product,'imageFile')}}" alt="" style="">
+                                     <img src="{{vich_uploader_asset(product,'imageFile')}}" alt="" style="">
                                 </div>
                                 <div class="g-caption1">
-                                    <span> {{product.prix}}</span>
+                                    <span>{{product.prix}}</span>
                                     <h4>{{product.name}}</h4>
                                 </div>
                                 <div class="g-caption2">
-                                <span> {{product.prix}}</span>
-
+                                    <span>{{product.prix}}</span>
                                     <h4>{{product.name}}</h4>
                                     <p>{{product.description}}</p>
-                            
-                                    <a href="{{path('product_show',{'id': product.id})}}" class="read_btn">Read more</a>
-                                </div>
+                                <a href="{{path('product_show',{'id': product.id})}}" class="read_btn">Read more</a>
+                             </div>
                             </div>
                         </div>
-                    </div> 
-</div>
-</div>
-</div>
-
-         
-
-            
-            {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+      {% endfor %}
+        
 
 </main>
+
   
   
         

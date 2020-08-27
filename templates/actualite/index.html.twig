@@ -28,6 +28,14 @@
 
        
    <main>
+   <div class="container">
+                <div class="row">
+                    <div class="col-xl-8">
+                        
+                    </div>
+                </div>
+            </div>
+        
    <section class="sections about">
 	<div class="container">
 		<div class="section-header text-center">
@@ -40,6 +48,8 @@
 
 <br>
 <br>
+           
+    
 
 {% for actualite in actualites%}
 <section class="blog_area section-padding">
@@ -49,7 +59,7 @@
                     <div class="blog_left_sidebar">
                         <article class="blog_item">
                             <div class="blog_item_img">
-                            <img src="{{vich_uploader_asset(actualite,'imageFile')}}">
+                            <img src="{{vich_uploader_asset(actualite,'imageFile')}}" >
 
                                 <a href="#" class="blog_item_date">
                                     <h3>{{ actualite.createdAt|date("m/d/Y", "Europe/Paris")}}</h3>
@@ -58,15 +68,17 @@
 
                             <div class="blog_details">
                                 <a class="d-inline-block" href="single-blog.html">
-                                <h2>Bienvenu<span> Chez DTS </span><br>
-        {{actualite.titre}}</h2>
+                                <h2>Bienvenu<span> Chez DTS </span><br>  {{actualite.titre}}</h2>
                                 </a>
                                 <p>{{actualite.contenu}}</p>
-                                <a href="{{path('actualite_show',{'id': actualite.id})}}" class="about-info-btn">
-Lire la suite</a>
-                               
+                                <a href="{{path('actualite_show',{'id': actualite.id})}}" class="about-info-btn">Lire la suite</a>
+                               </div>
                             </div>
                         </article>
+                        </div>
+                        </div>
+                        </div>
+                        </section>
 
             {% endfor %}
 
