@@ -1,0 +1,13 @@
+<div class="single-services s-bg mb-30">
+    <div class="services-icon">
+        <img src="{{vich_uploader_asset(service,'imageFile')}}" alt="">
+    </div>
+    <div class="services-caption">
+        <h4>{{ service.nomService }}</h4>
+        <p>{{ service.description }}</p>
+    </div>
+    <div class="services-btn">
+        <a href="{{path('service_show',{'id': service.id})}}" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt="Symfony!"/>
+        </a>
+    </div>
+</div>

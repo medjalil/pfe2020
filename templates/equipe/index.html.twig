@@ -41,21 +41,13 @@
                           <a href='/contact' class="btn">Nous contacter </a>
                         </div>
                     </div>
-                    <!-- single Tem -->
-                    {% for equipe in equipes%}
-
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="{{vich_uploader_asset(equipe,'imageFile')}}" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span><a href="#">{{equipe.Nom}}</a></span>
-                                <p>{{equipe.service}}</p>
+                    {% for equipe in equipes %}
+                {{ include('equipe/equipe.html.twig') }}
+            {% endfor %}
                             </div>
                         </div>
-                    </div>
-                    {% endfor %}
+                    
+                  
                     
         <!-- Team End -->
 </main>

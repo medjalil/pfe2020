@@ -1,10 +1,10 @@
 {% extends 'base.html.twig'%}
 
 {% block body %}
-<head>   
-<link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
-<link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/> 
-</head>
+    <head>
+        <link href="{{ asset('css/st.css') }}" rel="stylesheet"/>
+        <link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/>
+    </head>
     <main>
         <!-- slider Area Start-->
         <div class="slider-area ">
@@ -39,68 +39,12 @@
         </section>
         <!-- Services DTS-->
         <div class="services-area d-flex justify-content-lg-between">
-            <div class="single-services s-bg mb-30">
-                <div class="services-icon">
-                    <img src="{{ asset('images/icon/1.ico') }}" alt="">
-                </div>
-                <div class="services-caption">
-                    <h4>Photovoltaïque Résidentiel</h4>
-                    <p> DTS développe et anime un réseau d’installateurs qualifiés et expérimentés pour la pose de toutes nos solutions:panneaux photovoltaïques, systèmes de stockage batterie et de gestion intelligente de l’énergie.</p>
-                </div>
-                <div class="services-btn">
-                    <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt="Symfony!"/>
-                    </a>
-                </div>
-            </div>
-            <div class="single-services mb-30">
-                <div class="services-icon">
-                    <img src="{{ asset('images/icon/5.ico') }}" alt="Symfony!"/>
-                </div>
-                <div class="services-caption">
-                    <h4>Service Exploitation & Maintenance</h4>
-                    <p>DTS est une société axée sur la clientèle, qui vise à fournir un excellent service grâce à une collaboration continue avec les clients</p>
-                </div>
-                <div class="services-btn">
-                    <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt="sy"></a>
-                </div>
-            </div>
-            <div class="single-services s-bg mb-30">
-                <div class="services-icon">
-                    <img src="{{ asset('images/icon/4.ico') }}" alt="">
-                </div>
-                <div class="services-caption">
-                    <h4>Bureau d’études photovoltaïque</h4>
-                    <p>DTS apporte son expertise de Bureau d’études photovoltaïque aux maîtres d’ouvrage publics et privés pour mettre en œuvre leurs projets d’installations photovoltaïques :</p>
-                </div>
-                <div class="services-btn">
-                    <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt=""></a>
-                </div>
-            </div>
-            <div class="single-services mb-30">
-                <div class="services-icon">
-                    <img src="{{ asset('images/icon/6.ico') }}" alt="Symfony!"/>
-                </div>
-                <div class="services-caption">
-                    <h4>Photovoltaïque pour irrigation</h4>
-                    <p>L’irrigation représente, dans les exploitations agricoles totalement dédiées à la production végétale, la part la plus importante de la consommation énergétique</p>
-                </div>
-                <div class="services-btn">
-                    <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt="sy"></a>
-                </div>
-            </div>
-            <div class="single-services mb-30">
-                <div class="services-icon">
-                    <img src="{{ asset('images/icon/3.ico') }}" alt="Symfony!"/>
-                </div>
-                <div class="services-caption">
-                    <h4>Photovoltaïque Commercial & Industriel</h4>
-                    <p>Des panneaux photovoltaïques ultra-résistants et performants	Des solutions pour le stockage de l’électricité solaire	Une qualité premium « Made in Germany »	30 ans de garantie produit et rendement	Un service zéro risque d’assurance
-                    </p>
-                </div>
-                <div class="services-btn">
-                    <a href="industries.html" class="arrow-btn"><img src="{{ asset('images/icon/arrow_icon.png') }}" alt="sy"></a>
-                </div>
-            </div>
+
+            {% for service in services %}
+                {{ include('service/_service.html.twig') }}
+            {% endfor %}
+
+
         </div>
         <!-- Safe Industery Start -->
         <div class="safe-industery-area section-padd-top30">
@@ -152,92 +96,88 @@
         <br>
         <!-- Gallery Start-->
         <div class="gallery-area">
-            <div class="container-fluid p-0">
-                <div class="row no-gutters">
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="gallery-box">
-                            <div class="single-gallery">
-                                <div class="gallery-img">
-                                    <img src="{{ asset('images/produits/4.jpg') }}" alt="">
-                                </div>
-                                <div class="g-caption1">
-                                    <span>150</span>
-                                    <h4>Filtre pour pompe de surface SHURFLO 2088 8000 5000</h4>
-                                </div>
-                                <div class="g-caption2">
-                                    <span>150D</span>
-                                    <h4>Filtre pour pompe de surface SHURFLO 2088 8000 5000</h4>
-                                    <p>Afin d'optimiser la durée de vie de votre pompe solaire, nous vous conseillons d'y associer un filtre SHURFLO ®. Ce filtre nettoyable se visse directement à la main à l'entrée de la pompe, sans joints.La pompe solaire de surface Deluxe Light 2088 12V présente les mêmes caractéristiques que la pompe de surface Deluxe 2088 12VCC mais est conçue pour une utilisation faible.</p>
-                                    <a href="work.html" class="read-btn">Lire la suite</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="gallery-box">
-                            <div class="single-gallery">
-                                <div class="gallery-img">
-                                    <img src="{{ asset('images/produits/1.jpg') }}" alt="">
-                                </div>
-                                <div class="g-caption1">
-                                    <span>999D</span>
-                                    <h4>Panneau solaire semi-rigide pliable de 120Wc - 12V</h4>
-                                </div>
-                                <div class="g-caption2">
-                                    <span>02.</span>
-                                    <h4>Panneau solaire semi-rigide pliable de 120Wc - 12V</h4>
-                                    <p>Ce panneau solaire souple pliable et facilement transportable de 120Wc est composé de cellules monocristallines back-contact à haut rendement (> 20%).</p>
-                                    <a href="work.html" class="read-btn">Lire la suite</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="gallery-box">
-                            <div class="single-gallery">
-                                <div class="gallery-img">
-                                    <img src="{{ asset('images/produits/3.jpg') }}" alt="">
-                                </div>
-                                <div class="g-caption1">
-                                    <span>870D</span>
-                                    <h4>Kit solaire camping-car VICTRON monocristallin 115W (115Wc - 12V)/h4>
-                                </div>
-                                <div class="g-caption2">
-                                    <span>03.</span>
-                                    <h4>Kit solaire camping-car VICTRON monocristallin 115W (115Wc - 12V)</h4>
-                                    <p>1 x Panneau solaire monocristallin VICTRON 115Wc / 12V 1 x Régulateur solaire VICTRON BlueSolar LCD 10A avec chargeur USB 1 x Kit de fixation universel SOLARA pour un panneau solaire avec passage de toit étanche. 1 x Cartouche de colle pour fixation 6 mètres de câble 2 x 4 mm² avec connecteurs MC4 sertis 3 mètres de câble 2 x 6 mm² avec cosses batterie sertis</p>
-                                    <a href="work.html" class="read-btn">Lire la suite</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="gallery-box">
-                            <div class="single-gallery">
-                                <div class="gallery-img">
-                                    <img src="{{ asset('images/produits/2.jpg') }}" alt="">
-                                </div>
-                                <div class="g-caption1">
-                                    <span>110D</span>
-                                    <h4>Panneaux Photovoltaïques Onduleurs.</h4>
-                                </div>
-                                <div class="g-caption2">
-                                    <span>110D</span>
-                                    <h4>Panneaux Photovoltaïques Onduleurs.</h4>
-                                    <p>Les fonctions de l'onduleur sont de convertir l'électricité produite avec un maximum d'efficacité et en toute sécurité vers le réseau électrique. En moyenne, l’onduleur a une durée de vie de 8 à 12 ans.</p>
-                                    <a href="work.html" class="read-btn">Lire la suite</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+<div class="container-fluid p-0">
+<div class="row no-gutters">
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+<div class="gallery-box">
+<div class="single-gallery">
+<div class="gallery-img">
+<img src="assets/img/gallery/gallery_1.png" alt="">
+</div>
+<div class="g-caption1">
+<span>01.</span>
+<h4>Floride Chemicals Factory</h4>
+</div>
+<div class="g-caption2">
+<span>01.</span>
+<h4>Floride Chemicals Factory</h4>
+<p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
+<a href="work.html" class="read-btn">Read more</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+<div class="gallery-box">
+<div class="single-gallery">
+<div class="gallery-img">
+<img src="assets/img/gallery/gallery_2.png" alt="">
+</div>
+<div class="g-caption1">
+<span>02.</span>
+<h4>Floride Chemicals Factory</h4>
+</div>
+<div class="g-caption2">
+<span>02.</span>
+<h4>Floride Chemicals Factory</h4>
+<p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
+<a href="work.html" class="read-btn">Read more</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+<div class="gallery-box">
+<div class="single-gallery">
+<div class="gallery-img">
+<img src="assets/img/gallery/gallery_3.png" alt="">
+</div>
+<div class="g-caption1">
+<span>03.</span>
+<h4>Floride Chemicals Factory</h4>
+</div>
+<div class="g-caption2">
+<span>03.</span>
+<h4>Floride Chemicals Factory</h4>
+<p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
+<a href="work.html" class="read-btn">Read more</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+<div class="gallery-box">
+<div class="single-gallery">
+<div class="gallery-img">
+<img src="assets/img/gallery/gallery_2.png" alt="">
+</div>
+<div class="g-caption1">
+<span>04.</span>
+<h4>Floride Chemicals Factory</h4>
+</div>
+<div class="g-caption2">
+<span>04.</span>
+<h4>Floride Chemicals Factory</h4>
+<p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
+<a href="work.html" class="read-btn">Read more</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            
         <!-- Gallery End-->
         <!-- Team Start -->
         <section class="sections about">
@@ -260,65 +200,18 @@
                         </div>
                     </div>
                     <!-- single Tem -->
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="{{ asset('images/team/h1__team.png') }}" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span><a href="#">Bruce Roberts</a></span>
-                                <p>Team Officer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="{{ asset('images/team/h2__team.png') }}" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span><a href="#">Bruce Roberts</a></span>
-                                <p>Team Officer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="{{ asset('images/team/h3__team.png') }}" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span><a href="#">Bruce Roberts</a></span>
-                                <p>Team Officer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="{{ asset('images/team/h4__team.png') }}" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span><a href="#">Bruce Roberts</a></span>
-                                <p>Team Officer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="{{ asset('images/team/h5__team.png') }}" alt="">
+                    
+                    {% for equipe in equipes %}
+                {{ include('equipe/equipe.html.twig') }}
+            {% endfor %}
 
-                            </div>
-                            <div class="team-caption">
-                                <span><a href="#">Bruce Roberts</a></span>
-                                <p>Team Officer</p>
-                            </div>
-                        </div>
-                    </div>
+                       
+               
                 </div>
-            </div>
-        </div>
+                </div>
+                </div>
+              
+                    
         <!-- Team End -->
         <section class="sections about">
             <div class="container">
@@ -328,7 +221,17 @@
                 </div>
             </div>
         </section>
-        <br>
-        <br>
+        <section class="blog_area section-padding">
+        <div class="container">
+            <div class="row">
+            {% for actualite in actualites %}
+                {{ include('actualite/actualite.html.twig') }}
+            {% endfor %}
+
+</div>
+</div>
+</section>
+        
     </main>
+
 {% endblock %}
