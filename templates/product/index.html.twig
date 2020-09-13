@@ -3,17 +3,13 @@
 {% block title %}Nos Produits!{% endblock %}
 
 {% block body %}
-<head>   
-<link href="{{ asset('css/st.css') }}" rel="stylesheet"/> 
-<link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/> 
-</head>
 
-   <body>
-   <main>
-   
-   
-   <div class="slider-area ">
-   <div class="single-slider slider-height2 d-flex align-items-center" style="background-image:url('{{ asset('images/1.jpg') }}')">
+
+    <main>
+
+
+        <div class="slider-area ">
+            <div class="single-slider slider-height2 d-flex align-items-center" style="background-image:url('{{ asset('images/1.jpg') }}')">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
@@ -26,22 +22,21 @@
             </div>
         </div>
 
-        <div class="gallery-area section-padding2">
+        <div class="gallery-area">
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
-           {% for product in products %}
-                   {{ include('product/product.html.twig') }}
-               {% endfor %}
-               
-        </div>
-        </div>
-        </div>
-</main>
+                    {% for product in products %}
+                        {{ include('product/_product.html.twig') }}
+                    {% endfor %}
 
-  
-  
-        
-  </body>
-      
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
 
 {% endblock %}

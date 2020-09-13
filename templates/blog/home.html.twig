@@ -1,80 +1,74 @@
 {% extends 'base.html.twig'%}
 
 {% block body %}
-    <head>
-        <link href="{{ asset('css/st.css') }}" rel="stylesheet"/>
-        <link href="{{ asset('css/actualite.css') }}" rel="stylesheet"/>
-    </head>
-    <main>
-        <!-- slider Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider  hero-overly slider-height d-flex align-items-center" style="background-image:url('{{ asset('images/25.jpg') }}')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-8 col-md-8">
-                            <div class="hero__caption" style="background-image:url('{{ asset('images/jaune.png') }}')">
-                                <h1 data-animation="fadeInUp" data-delay=".4s">DIAMANT TECHNOLOGY SOLAR </h1>
-                                <p data-animation="fadeInUp" data-delay=".6s">
-                                <p>Vous voulez economisez jusqu'a 100% sur votre facture steg ? Nos solutions photovoltaiques sont adaptées a vos besoins et habitudes</p>
-                                <!-- Hero-btn -->
-                                <div class="hero__btn" data-animation="fadeInUp" data-delay=".7s">
-                                    <a href="/product" class="btn hero-btn">Notre Produit</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <!-- slider Area End-->
-        <br>
-        <section class="sections about">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Notre Services </h2>
-                    <div class="line"><span></span></div>
-                </div>
-            </div>
-        </section>
-        <!-- Services DTS-->
-        <div class="services-area d-flex justify-content-lg-between">
-
-            {% for service in services %}
-                {{ include('service/_service.html.twig') }}
-            {% endfor %}
-
-
-        </div>
-        <!-- Safe Industery Start -->
-        <div class="safe-industery-area section-padd-top30">
+    <!-- slider Area Start-->
+    <div class="slider-area ">
+        <div class="single-slider  hero-overly slider-height d-flex align-items-center" style="background-image:url('{{ asset('images/25.jpg') }}')">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md pr-0">
-                        <div class="safe-caption pt-10 mb-40">
-                            <h2>DIAMANT TECHNOLOGY SOLAR </h2>
-                            <p class="safe-pera-one">DTS est gérée par des cadres supérieurs et des managers spécialisés dans le domaine des semi-conducteurs, de l'ingénierie informatique et de l'électronique, avec une expérience sur la scène internationale.</p>
-                            <p  class="safe-pera-two"> Dotés d'une expérience industrielle dans la fabrication de cellules solaires et d'un partenariat tout au long de la chaîne de valeur du solaire, nous savons quelle(s) technologie(s) recommander à nos clients pour assurer leur tranquillité d'esprit dans leur investissement. </p>
-                            <p  class="safe-pera-three"> </p>
-                            <!-- btn -->
-                            <a href="/about" class="btn">Qui sommes-nous?</a>
+                    <div class="col-xl-6 col-lg-8 col-md-8">
+                        <div class="hero__caption" style="background-image:url('{{ asset('images/jaune.png') }}')">
+                            <h1 data-animation="fadeInUp" data-delay=".4s">DIAMANT TECHNOLOGY SOLAR </h1>
+                            <p data-animation="fadeInUp" data-delay=".6s">
+                            <p>Vous voulez economisez jusqu'a 100% sur votre facture steg ? Nos solutions photovoltaiques sont adaptées a vos besoins et habitudes</p>
+                            <!-- Hero-btn -->
+                            <div class="hero__btn" data-animation="fadeInUp" data-delay=".7s">
+                                <a href="/product" class="btn hero-btn">Notre Produit</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 offset-xl-1 col-lg-6 pl-0">
-                        <div class="safe-caption-right">
-                            <div class="safe-img">
-                                <img src="{{ asset('images/team/h1__team.png') }}" alt="">
-                            </div>
-                            <!-- img TOP caption -->
-                            <div class="safe-alert-box">
-                                <div class="row">
-                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 d-none d-sm-block">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- slider Area End-->
+    <br>
+    <section class="sections about">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Notre Services </h2>
+                <div class="line"><span></span></div>
+            </div>
+        </div>
+    </section>
+    <!-- Services DTS-->
+    <div class="services-area d-flex justify-content-lg-between">
 
-                                        <div class="safe-alert" style="background-image:url('{{ asset('images/color_bg.png') }}')">
-                                            <img src="{{ asset('images/icon/aleart_icon.png') }}" alt="">
-                                            <h4>DTS OBJECTIF</h4>
-                                            <p>Assurer auprès du client un rôle de conseil et d’assistance dans le choix des solutions les mieux adaptées à son contexte.</p>
-                                        </div>
+        {% for service in services %}
+            {{ include('service/_service.html.twig') }}
+        {% endfor %}
+
+
+    </div>
+    <!-- Safe Industery Start -->
+    <div class="safe-industery-area section-padd-top30">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md pr-0">
+                    <div class="safe-caption pt-10 mb-40">
+                        <h2>DIAMANT TECHNOLOGY SOLAR </h2>
+                        <p class="safe-pera-one">DTS est gérée par des cadres supérieurs et des managers spécialisés dans le domaine des semi-conducteurs, de l'ingénierie informatique et de l'électronique, avec une expérience sur la scène internationale.</p>
+                        <p  class="safe-pera-two"> Dotés d'une expérience industrielle dans la fabrication de cellules solaires et d'un partenariat tout au long de la chaîne de valeur du solaire, nous savons quelle(s) technologie(s) recommander à nos clients pour assurer leur tranquillité d'esprit dans leur investissement. </p>
+                        <p  class="safe-pera-three"> </p>
+                        <!-- btn -->
+                        <a href="/about" class="btn">Qui sommes-nous?</a>
+                    </div>
+                </div>
+                <div class="col-xl-5 offset-xl-1 col-lg-6 pl-0">
+                    <div class="safe-caption-right">
+                        <div class="safe-img">
+                            <img src="{{ asset('images/team/h1__team.png') }}" alt="">
+                        </div>
+                        <!-- img TOP caption -->
+                        <div class="safe-alert-box">
+                            <div class="row">
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 d-none d-sm-block">
+
+                                    <div class="safe-alert" style="background-image:url('{{ asset('images/color_bg.png') }}')">
+                                        <img src="{{ asset('images/icon/aleart_icon.png') }}" alt="">
+                                        <h4>DTS OBJECTIF</h4>
+                                        <p>Assurer auprès du client un rôle de conseil et d’assistance dans le choix des solutions les mieux adaptées à son contexte.</p>
                                     </div>
                                 </div>
                             </div>
@@ -83,155 +77,82 @@
                 </div>
             </div>
         </div>
-        <!-- Safe Industery End -->
-        <section class="sections about">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Nos Produits</h2>
-                    <div class="line"><span></span></div>
-                </div>
+    </div>
+    <!-- Safe Industery End -->
+    <section class="sections about">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Nos Produits</h2>
+                <div class="line"><span></span></div>
             </div>
-        </section>
-        <br>
-        <br>
-        <!-- Gallery Start-->
-        <div class="gallery-area">
-<div class="container-fluid p-0">
-<div class="row no-gutters">
-<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-<div class="gallery-box">
-<div class="single-gallery">
-<div class="gallery-img">
-<img src="assets/img/gallery/gallery_1.png" alt="">
-</div>
-<div class="g-caption1">
-<span>01.</span>
-<h4>Floride Chemicals Factory</h4>
-</div>
-<div class="g-caption2">
-<span>01.</span>
-<h4>Floride Chemicals Factory</h4>
-<p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
-<a href="work.html" class="read-btn">Read more</a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-<div class="gallery-box">
-<div class="single-gallery">
-<div class="gallery-img">
-<img src="assets/img/gallery/gallery_2.png" alt="">
-</div>
-<div class="g-caption1">
-<span>02.</span>
-<h4>Floride Chemicals Factory</h4>
-</div>
-<div class="g-caption2">
-<span>02.</span>
-<h4>Floride Chemicals Factory</h4>
-<p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
-<a href="work.html" class="read-btn">Read more</a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-<div class="gallery-box">
-<div class="single-gallery">
-<div class="gallery-img">
-<img src="assets/img/gallery/gallery_3.png" alt="">
-</div>
-<div class="g-caption1">
-<span>03.</span>
-<h4>Floride Chemicals Factory</h4>
-</div>
-<div class="g-caption2">
-<span>03.</span>
-<h4>Floride Chemicals Factory</h4>
-<p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
-<a href="work.html" class="read-btn">Read more</a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-<div class="gallery-box">
-<div class="single-gallery">
-<div class="gallery-img">
-<img src="assets/img/gallery/gallery_2.png" alt="">
-</div>
-<div class="g-caption1">
-<span>04.</span>
-<h4>Floride Chemicals Factory</h4>
-</div>
-<div class="g-caption2">
-<span>04.</span>
-<h4>Floride Chemicals Factory</h4>
-<p>Lorem ipsum dolor sit amet, consectetur smo adipiscing elit, sed do eiusmod tempor inciut labore et dolore magna ali.</p>
-<a href="work.html" class="read-btn">Read more</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-            
-        <!-- Gallery End-->
-        <!-- Team Start -->
-        <section class="sections about">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Notre Equipe </h2>
-                    <div class="line"><span></span></div>
-                </div>
-            </div>
-        </section>
-        <div class="team-area section2-padding30">
-            <div class="container">
-                <div class="row">
-                    <!-- Team Info -->
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="team-info mb-30 pt-45">
-                            <h2>Notre équipe members</h2>
-                            <p>Vous voulez economisez jusqu'a 100% sur votre facture steg ? Nos solutions photovoltaiques sont adaptées a vos besoins et habitudes</p>
-                            <a href='equipe' class="btn">Notre Equipe</a>
-                        </div>
-                    </div>
-                    <!-- single Tem -->
-                    
-                    {% for equipe in equipes %}
-                {{ include('equipe/equipe.html.twig') }}
-            {% endfor %}
+        </div>
+    </section>
+    <br>
+    <br>
+    <!-- Gallery Start-->
+    <div class="gallery-area">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                {% for product in products %}
+                    {{ include('product/_product.html.twig') }}
+                {% endfor %}
 
-                       
-               
-                </div>
-                </div>
-                </div>
-              
-                    
-        <!-- Team End -->
-        <section class="sections about">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Les actualités  </h2>
-                    <div class="line"><span></span></div>
-                </div>
             </div>
-        </section>
-        <section class="blog_area section-padding">
+        </div>
+    </div>
+
+    <!-- Gallery End-->
+    <!-- Team Start -->
+    <section class="sections about">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Notre Equipe </h2>
+                <div class="line"><span></span></div>
+            </div>
+        </div>
+    </section>
+    <div class="team-area section2-padding30">
         <div class="container">
             <div class="row">
-            {% for actualite in actualites %}
-                {{ include('actualite/actualite.html.twig') }}
-            {% endfor %}
+                <!-- Team Info -->
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                    <div class="team-info mb-30 pt-45">
+                        <h2>Notre équipe members</h2>
+                        <p>Vous voulez economisez jusqu'a 100% sur votre facture steg ? Nos solutions photovoltaiques sont adaptées a vos besoins et habitudes</p>
+                        <a href='equipe' class="btn">Notre Equipe</a>
+                    </div>
+                </div>
+                <!-- single Tem -->
 
-</div>
-</div>
-</section>
-        
-    </main>
+                {% for equipe in equipes %}
+                    {{ include('equipe/equipe.html.twig') }}
+                {% endfor %}
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Team End -->
+    <section class="sections about">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Les actualités  </h2>
+                <div class="line"><span></span></div>
+            </div>
+        </div>
+    </section>
+    <section class="blog_area section-padding">
+        <div class="container">
+            <div class="row">
+                {% for actualite in actualites %}
+                    {{ include('actualite/actualite.html.twig') }}
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

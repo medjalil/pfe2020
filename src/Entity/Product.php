@@ -28,10 +28,9 @@ class Product {
     /**
      * @ORM\Column(type="text")
      */
-    
     private $description;
 
-      /**
+    /**
      * @Vich\UploadableField(mapping="products", fileNameProperty="image")
      *
      * @var File
@@ -42,7 +41,7 @@ class Product {
      * @ORM\Column(type="string", length=255)
      */
     private $image;
-     
+
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
@@ -75,8 +74,6 @@ class Product {
 
         return $this;
     }
-   
-    
 
     public function getDescription(): ?string {
         return $this->description;
@@ -87,29 +84,25 @@ class Product {
 
         return $this;
     }
-    public function getImageFile(): ?File
-    {
+
+    public function getImageFile(): ?File {
         return $this->imageFile;
     }
 
-  
-    public function setImageFile(?File $imageFile = null)
-    {
+    public function setImageFile(?File $imageFile = null) {
         $this->imageFile = $imageFile;
 
         if (null !== $imageFile) {
-           
+
             $this->updatedAt = new DateTimeImmutable();
         }
     }
-
-  
 
     public function getImage(): ?string {
         return $this->image;
     }
 
-    public function setImage(string $image): self {
+    public function setImage(?string $image): self {
         $this->image = $image;
 
         return $this;
@@ -124,11 +117,11 @@ class Product {
 
         return $this;
     }
-     /**
+
+    /**
      * @return \DateTimeInterface|null
      */
-    public function getUpdated(): ?\DateTimeInterface
-    {
+    public function getUpdated(): ?\DateTimeInterface {
         return $this->updated;
     }
 
@@ -136,19 +129,16 @@ class Product {
      * @param \DateTimeInterface|null $updated
      * @return $this
      */
-    public function setUpdated(?\DateTimeInterface $updated): self
-    {
+    public function setUpdated(?\DateTimeInterface $updated): self {
         $this->updated = $updated;
         return $this;
     }
 
-    public function getPrix(): ?string
-    {
+    public function getPrix(): ?string {
         return $this->prix;
     }
 
-    public function setPrix(string $prix): self
-    {
+    public function setPrix(string $prix): self {
         $this->prix = $prix;
 
         return $this;
