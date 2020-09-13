@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Entity\Actualite;
 use App\Form\ActualiteType;
 use App\Repository\ActualiteRepository;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 
 
@@ -96,6 +97,7 @@ class ActualiteController extends AbstractController
             $entityManager->remove($actualite);
             $entityManager->flush();
         }
+
 
         return $this->redirectToRoute('actualite_index');
     }

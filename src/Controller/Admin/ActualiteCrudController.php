@@ -36,6 +36,7 @@ class ActualiteCrudController extends AbstractCrudController
                 ->setBasePath("/products/images")
 
                                 ->setLabel('Image'),
+                                
                 
     
             
@@ -46,4 +47,5 @@ class ActualiteCrudController extends AbstractCrudController
         ];
     }
     
+ 
 }
