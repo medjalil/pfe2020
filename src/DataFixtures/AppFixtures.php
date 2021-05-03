@@ -21,15 +21,7 @@ class AppFixtures extends Fixture {
             $manager->persist($actualite);
         }
 
-        for ($j = 0; $j < 8; $j++) {
-            $product = new Product();
-            $product->setName($faker->text($maxNbChars = 100));
-            $product->setDescription($faker->realText($maxNbChars = 200, $indexSize = 2));
-            $product->setImage($faker->imageUrl($width = 640, $height = 480, 'cats'));
-            $product->setCreatedAt($faker->dateTime($max = 'now'));
-            $manager->persist($product);
-        }
-        $manager->flush();
+        
     }
 
 }

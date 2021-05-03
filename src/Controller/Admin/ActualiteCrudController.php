@@ -26,24 +26,12 @@ class ActualiteCrudController extends AbstractCrudController
         return [
             IntegerField::new('id', 'ID')->onlyOnIndex(),
             TextField::new('titre'),
-            TextField::new('contenu'),
+            TextEditorField::new('contenu'),
             DateTimeField::new('createdAt'),
-
-            
-               
-             $imageField = ImageField::new('imageFile')
-                ->setFormType(VichImageType::class)
-                ->setBasePath("/products/images")
-
-                                ->setLabel('Image'),
+            ImageField::new('imageFile')
+            ->setFormType(VichImageType::class)
+                ->setLabel('Image'),
                                 
-                
-    
-            
-    
-                
-
-
         ];
     }
     

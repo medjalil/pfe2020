@@ -505,7 +505,7 @@
         ]
     },
     "symfony/templating": {
-        "version": "v4.4.10"
+        "version": "v4.4.11"
     },
     "symfony/test-pack": {
         "version": "v1.0.6"

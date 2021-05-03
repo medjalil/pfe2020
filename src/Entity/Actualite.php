@@ -34,26 +34,19 @@ class Actualite
     
       /**
      * @ORM\Column(type="string", length=255)
-     * @var string|null
      */
     private $image;
 
      /**
      * @Vich\UploadableField(mapping="products", fileNameProperty="image")
-     * @var string|null
+     * @var File
      */
     private $imageFile;
-
-  
-
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime",nullable=true)
      */
     private $createdAt;
-      /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $updatedAt;
+
 
     public function getId(): ?int
     {
@@ -91,14 +84,13 @@ class Actualite
     }
     
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 
         return $this;
     }
     
-  
     public function getImageFile(): ?File
     {
         return $this->imageFile;
@@ -110,7 +102,7 @@ class Actualite
 
         if (null !== $imageFile) {
            
-            $this->updated_at = new \DateTime('now');
+            $this->updatedAt = new DateTimeImmutable();
         }
     }
    
@@ -126,24 +118,5 @@ class Actualite
 
         return $this;
     }
-    /**
-     * @return \DateTimeInterface|null
-     */
-    public function getUpdated(): ?\DateTimeInterface
-    {
-        return $this->updated;
-    }
-
-    /**
-     * @param \DateTimeInterface|null $updated
-     * @return $this
-     */
-    public function setUpdated(?\DateTimeInterface $updated): self
-    {
-        $this->updated = $updated;
-        return $this;
-    }
   
-   
-    
 }

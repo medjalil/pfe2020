@@ -46,4 +46,11 @@ class ServiceRepository extends ServiceEntityRepository {
       ;
       }
      */
+    public function countAllService()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder->select('COUNT(a.id) as value');
+
+        return $queryBuilder->getQuery()->getOneOrNullResult();
+    }
 }

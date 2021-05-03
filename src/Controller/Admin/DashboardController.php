@@ -7,6 +7,9 @@ use App\Entity\Contact;
 use App\Entity\Product;
 use App\Entity\Service;
 use App\Entity\Actualite;
+use App\Repository\ServiceRepository;
+use App\Repository\ProductRepository;
+use App\Repository\UsersRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -18,6 +21,31 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 class DashboardController extends AbstractDashboardController
 {
     /**
+     * @var ProductRepository
+     */
+    protected ProductRepository $productRepository;
+
+    /**
+     * @var ServiceRepository
+     */
+    protected ServiceRepository $serviceRepository;
+
+    /**
+     * @var UsersRepository
+     */
+    protected UsersRepository $usersRepository;
+
+    public function __construct(
+        UsersRepository $usersRepository,
+        ProductRepository $productRepository,
+        ServiceRepository $serviceRepository
+    )
+    {
+        $this->usersRepository = $usersRepository;
+        $this->productRepository = $productRepository;
+        $this->serviceRepository = $serviceRepository;
+    }
+    /**
      * @Route("/admin", name="admin")
      * @Security("is_granted('ROLE_USER')")
      * Security("is_granted('ROLE_ADMIN')")
@@ -26,7 +54,12 @@ class DashboardController extends AbstractDashboardController
     {
         
         
-        return parent::index();
+        return $this->render('bundle/EasyAdminBubdle/welcome.html.twig', [
+            'countProduct' => $this->productRepository->countAllProduct(),
+            'countUser' => $this->usersRepository->countAllUser(),
+            'countService' => $this->serviceRepository->countAllService(),
+        ]);
+    
     }
     public function adminDashboard()
 {
